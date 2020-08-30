@@ -1,0 +1,44 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: directory
+  path: hugo/content/for-sale
+  label: For Sale
+  create: documents
+  match: "*"
+- type: directory
+  path: hugo/content/analytical-services
+  label: Analytical Services
+  create: documents
+  match: "*"
+- type: directory
+  path: hugo/content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: hugo/content/posts
+  label: Posts
+  create: all
+  match: "**/*"
+  templates:
+  - success-story
+upload_dir: GideonLabs
+public_path: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs
+front_matter_path: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_fill,w_250
+use_front_matter_path: true
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.57.1
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.57.1

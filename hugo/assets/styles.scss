@@ -1,0 +1,50 @@
+@import './scss/reboot';
+@import './scss/colors';
+@import './scss/mainroad';
+@import './scss/fonts';
+@import './scss/header';
+@import './scss/contact';
+@import './scss/buttons';
+@import './scss/hero';
+@import './scss/footer';
+@import './scss/steps';
+@import './scss/categories';
+
+body {
+  margin: 0;
+  background-color: #f9f8f6;
+  font-family: FuturaBT, sans-serif;
+  font-weight: 400;
+}
+
+html,
+body {
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  background-color: transparent; /* 1 */
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+.banner {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: var(--rgba-primary-4);
+  color: white;
+}

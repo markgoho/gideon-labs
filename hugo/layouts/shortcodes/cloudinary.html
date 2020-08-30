@@ -1,0 +1,12 @@
+<figure>
+  <picture>
+    <source srcset="//res.cloudinary.com/dy3wlzuye/image/upload/c_scale,w_300/v1579011424/GideonLabs/{{- .Get "src" -}}.webp" type="image/webp">
+    <img src="//res.cloudinary.com/dy3wlzuye/image/upload/c_scale,w_300/v1579011424/GideonLabs/{{ .Get "src" }}.jpg" {{ if or (.Get "alt") (.Get "caption") }} alt="{{ with .Get "alt" }}{{.}}{{ else }}{{ .Get "caption" }}{{ end }}"
+    {{- end -}} loading="lazy" width="300" height="300" />
+  </picture>
+  {{- if .Get "caption" -}}
+  <figcaption>
+      <h4>{{- .Get "caption" -}}</h4>
+  </figcaption>
+  {{- end -}}
+</figure>

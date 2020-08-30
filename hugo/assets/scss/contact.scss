@@ -1,0 +1,51 @@
+.contact-form {
+  input,
+  textarea {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+  }
+
+  textarea {
+    margin-bottom: 32px;
+  }
+
+  label {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  label:last-child {
+    margin-bottom: 0;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: none;
+    border: 1px solid rgb(200, 200, 200);
+    resize: none;
+
+    &:focus {
+      outline: none;
+      border: 1px solid hsl(0, 0%, 50%);
+    }
+  }
+
+  .button,
+  .message-sent {
+    margin-bottom: 32px;
+  }
+
+  .button {
+    width: 250px;
+
+    &:disabled {
+      background-color: hsl(347, 55%, 55%);
+      cursor: not-allowed;
+    }
+  }
+}

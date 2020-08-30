@@ -1,0 +1,49 @@
+.footer {
+  background-color: var(--footer-color);
+  padding: 32px 16px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 32px;
+}
+
+.copyright {
+  color: #fff;
+}
+
+.footer > * {
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.footer-links-container h4 {
+  color: #f1f1f1;
+  margin-bottom: 0;
+}
+
+.footer-links {
+  font-size: 14px;
+}
+
+.footer-links li {
+  list-style: none;
+  display: flex;
+  height: 48px;
+  align-content: center;
+}
+
+.footer-links a {
+  margin: auto 0;
+}
+
+.gal-logo {
+  width: 100%;
+  grid-column: 1 / 3;
+  // grid-area: gal-logo;
+}
+
+@media screen and (min-width: 769px) {
+  .gal-logo {
+    grid-column: 1 / 2;
+  }
+}

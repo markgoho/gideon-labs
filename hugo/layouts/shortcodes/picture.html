@@ -1,0 +1,12 @@
+<figure>
+  <picture>
+    <source srcset="/img/{{- .Get "src" -}}.webp" type="image/webp">
+    <img src="/img/{{ .Get "src" }}.jpg" {{ if or (.Get "alt") (.Get "caption") }} alt="{{ with .Get "alt" }}{{.}}{{ else }}{{ .Get "caption" }}{{ end }}"
+    {{- end -}} loading="lazy" width="300" height="300" />
+  </picture>
+  {{- if .Get "caption" -}}
+  <figcaption>
+      <h4>{{- .Get "caption" -}}</h4>
+  </figcaption>
+  {{- end -}}
+</figure>

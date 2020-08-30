@@ -1,0 +1,23 @@
+---
+title: '10TTS08S Phase Control SCR and FDC6324L Switch'
+date: 2018-01-26
+featured_image: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_250/v1/GideonLabs/Dark-cell-among-DMOS-cells.jpg
+categories:
+  - 'Silicon Controlled Rectifier'
+  - 'Success Stories'
+---
+
+Gideon Analytical Laboratories received two components for analysis. We received one [10TTS08S](http://www.vishay.com/docs/94572/vs-10tts08.pdf) phase control silicon controlled rectifier (SCR) and an [FDC6324L](http://www.mouser.com/ds/2/149/FDC6324L-1007157.pdf) integrated load switch. A [silicon controlled rectifier](https://en.wikipedia.org/wiki/Silicon_controlled_rectifier#cite_note-9) (SCR) is a four-layer solid-state current-controlling device. It consists of four layers of semiconductors, which form NPNP or PNPN structures have three P-N junctions labeled J1, J2 and J3, and three terminals. The anode terminal of an SCR is connected to the p-type material of a PNPN structure, and the cathode terminal is connected to the n-type layer, while the gate of the SCR is connected to the p-type material nearest to the cathode. The [FDC6324L integrated load switches](http://www.mouser.com/ds/2/149/FDC6324L-1007157.pdf) are suited for low voltage high side load switch application where low conduction loss and ease of driving are needed. The goal was to determine the reasons why the 10TTS08S SCR and the FDC6324L were failing.
+
+Failure analysis ensued. As with any device, first, the outside of the device was inspected before electrical testing. No anomalies or mechanical damage was observed on the exterior. There was no residual flux and the leads were in the appropriate surface mount position. First, we looked at the FDC6324L integrated load switch. The P-channel MOSFET was inspected before delayering the passivation. Upon examination, there were failure sites found. There was a dark cell among the DMOS cells, most likely a result of damage caused by heat, die fracturing or melted leads. The passivation and wire bonds were removed to locate the failure sites. There were several DMOS cells that had failed, resulting from too much voltage. The phase control SCR 10TTS08S was next. The SCR was electrically tested and was then disassembled. It had a direct short between the gate, pin 3 and the cathode, and pin 1. The device could not be triggered. Magnification revealed a possible site where the aluminum under the passivation was disturbed. There was also a disturbance on the guard ring edge of the gate with metal and debris, which demonstrated excessive potential on the gate. In sum, this was an application issue and not a manufacturing issue. There was too much current applied to these devices.
+
+Gideon Analytical Laboratories is one of the finest electronic failure analysis laboratories in the world. We have the knowledge, the technology, and the experience to determine the cause of almost any electronic failure. Over the past few decades, we have helped hundreds of companies save millions of dollars. If your company has devices that are failing, give Gideon Analytical Laboratories a call today.
+
+![Dark cell among DMOS cells](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Dark-cell-among-DMOS-cells.jpg 'Dark cell among DMOS cells')
+![Die is a mesa type, gate in upper left corner](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Die-is-a-mesa-type-gate-in-upper-left-corner.jpg 'Die is a mesa type, gate in upper left corner')
+![Disturbance on the guard ring edge](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Disturbance-on-the-guard-ring-edge.jpg 'Disturbance on the guard ring edge')
+![Wire bonds on top of MOSFET](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Wire-bonds-on-top-of-MOSFET.jpg 'Wire bonds on top of MOSFET')
+![Passivation and wire bonds removed to locate failure sites](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Passivation-and-wire-bonds-removed-to-locate-failure-sites.jpg 'Passivation and wire bonds removed to locate failure sites')
+![Failed DMOS cell](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Failed-DMOS-cell.jpg 'Failed DMOS cell')
+![SCR after decapsulation](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/SCR-after-decapsulation.jpg 'SCR after decapsulation')
+![FDC6324L Integrated Load Switch](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/FDC6324L-Integrated-Load-Switch.jpg 'FDC6324L Integrated Load Switch')

@@ -1,0 +1,18 @@
+{{- if isset .Site.Taxonomies "categories" }}
+  {{- if not (eq (len .Site.Taxonomies.categories) 0) }}
+    <div class="widget-categories widget">
+      <h4 class="widget__title">{{ T "categories_title" }}</h4>
+      <div class="widget__content">
+        <ul class="widget__list">
+          {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+            {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+              {{ range .Pages.ByTitle }}
+                <li class="widget__item"><a class="widget__link" href="{{ .Permalink }}">{{ .Title }}</a></li>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  {{- end }}
+{{- end }}

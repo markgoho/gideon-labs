@@ -1,0 +1,24 @@
+---
+title: 'Ralec RTT20132JTE Resistors'
+date: 2018-11-23
+featured_image: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_250/v1/GideonLabs/F52742-03-Printed-Circuit-Board.jpg
+categories:
+  - 'Analytical Services'
+---
+
+Gideon Analytical Laboratories received Printed Circuit Boards (PCBs) with Ralec RTT20132JTE resistors. A [PCB](https://en.wikipedia.org/wiki/Printed_circuit_board) is a mechanically supports and electrically connects electronic components or electrical components using conductive tracks, pads and other features etched from one or more sheet layers of copper laminated onto and/or between sheet layers of a non-conductive substrate. Components are generally soldered onto the PCB to both electrically connect and mechanically fasten them to it.  A [resistor](https://en.wikipedia.org/wiki/Resistor) a passive two-terminal electrical component that implements electrical resistance as a circuit element. In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, and terminate transmission lines, among other uses. High-power resistors that can dissipate many watts of electrical power as heat, may be used as part of motor controls, in power distribution systems, or as test loads for generators. The goal was to determine why the Ralec RTT20132JTE resistors were failing.
+
+Without hesitation, Gideon Analytical Laboratories got to work on failure analysis. Several of the resistors on the PCB were open. After examining the first PCB, it was obvious that there was an interconnect between the terminal and the resistive element on R1 and R2. There was also corrosion evident. SEM-EDS was utilized to examine the voided area. SEM-EDS analysis revealed the presence of sulfur on R1 and R2. R2 also had to void. Electrical characterization showed many of the resistors had low Megohm readings. The silver had corroded, opening up the connective path to the resistive element. The mystery of why the Ralec RTT20132JTE resistors were failing had been solved.
+
+Gideon Analytical Laboratories never fails when it comes to failures. We do failure analysis right. We offer our services to any electronics company that is experiencing reliability issues. We will determine the cause of your failure, with accurate results, in a timely manner. Don't waste time! If you are experiencing failures in the field, why wait? If you have problems in production, why the delay? Is it an application problem? Don't hesitate. We can save you time, money, resources, and give you peace of mind. We are here to help you. We have helped hundreds of companies determine why things are failing, why not your company too? If you need electronic failure analysis, give Gideon Analytical Laboratories a call today.
+
+![F52742-03 Printed Circuit Board](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/F52742-03-Printed-Circuit-Board.jpg 'F52742-03 Printed Circuit Board')
+![Micrograph of R1 and R2 on a good PCB, bubbles are voiding](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Micrograph-of-R1-and-R2-on-a-good-PCB-bubbles-are-voiding.jpg 'Micrograph of R1 and R2 on a good PCB, bubbles are voiding')
+![R1 and R2 on first PCB, resistive element is discolored](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/R1-and-R2-on-first-PCB-resistive-element-is-discolored.jpg 'R1 and R2 on first PCB, resistive element is discolored')
+![Radiograph of corrosion on R1 and R2](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Radiograph-of-corrosion-on-R1-and-R2.jpg 'Radiograph of corrosion on R1 and R2')
+![SEM-EDS of R1, presence of sulfur](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/SEM-EDS-of-R1-presence-of-sulfur.jpg 'SEM-EDS of R1, presence of sulfur')
+![SEM-EDS of R2, presence of sulfur](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/SEM-EDS-of-R2-presence-of-sulfur.jpg 'SEM-EDS of R2, presence of sulfur')
+![On next PCB, discolored terminals on R3 and R4](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/On-next-PCB-discolored-terminals-on-R3-and-R4.jpg 'On next PCB, discolored terminals on R3 and R4')
+![Micrograph of corrosion on R3 and R4](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Micrograph-of-corrosion-on-R3-and-R4.jpg 'Micrograph of corrosion on R3 and R4')
+![SEM-EDS of R3, presence of sulfur](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/SEM-EDS-of-R3-presence-of-sulfur.jpg 'SEM-EDS of R3, presence of sulfur')
+![SEM-EDS of R4, presence of sulfur](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/SEM-EDS-of-R4-presence-of-sulfur.jpg 'SEM-EDS of R4, presence of sulfur')

@@ -1,0 +1,27 @@
+.submit,
+.call-to-action,
+.button {
+  display: inline-block;
+  box-shadow: none;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--call-to-action);
+  user-select: none;
+
+  &:hover {
+    background-color: var(--call-to-action-hover);
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .call-to-action {
+    font-size: 24px;
+  }
+}

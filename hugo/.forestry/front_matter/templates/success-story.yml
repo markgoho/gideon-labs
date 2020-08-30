@@ -1,0 +1,26 @@
+---
+label: Success Story
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- name: categories
+  type: tag_list
+  default: []
+  label: categories
+  description: The categories of the Story
+- name: featured_image
+  type: file
+  config:
+    maxSize: 250
+  label: Featured Image
+  description: The featured image to show on the list of stories
+pages:
+- hugo/content/posts/failure-analysis-of-vishay-sqd50p04-13l-mosfet-part-2.md
+- hugo/content/posts/failure-analysis-of-vishay-sqd50p04-13l-mosfet.md
+- hugo/content/posts/lithium-ion-battery-analysis.md
+- hugo/content/posts/pcb-haloing-effect.md

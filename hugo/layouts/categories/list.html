@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>
+  {{- if isset .Params "name" }}
+    {{ .Params.name}}
+  {{ else}}
+    {{ .Title }}
+  {{ end -}}
+</h1>
+
+{{ if gt (len .Content) 0 }}
+{{ .Content }}
+{{ end }}
+
+<h2>Success Stories</h2>
+{{ range .Data.Pages }}
+  {{ .Render "summary" }}
+{{ end }}
+
+{{ end }}

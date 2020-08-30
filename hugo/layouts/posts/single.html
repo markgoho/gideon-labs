@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main class="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">{{ .Title }}</h1>
+			{{- with .Params.lead }}
+			<p class="post__lead">{{ . }}</p>
+			{{- end }}
+			{{ with partial "post_meta.html" . -}}
+			<div class="post__meta meta">{{ . }}</div>
+			{{- end }}
+		</header>
+		{{- partial "post_toc.html" . -}}
+		<div class="content post__content clearfix">
+			{{ .Content }}
+    </div>
+    <a href="/contact/" class="call-to-action">Start solving</a>
+	</article>
+</main>
+{{ partial "post_nav.html" . }}
+{{ end }}

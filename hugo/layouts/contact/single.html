@@ -1,0 +1,104 @@
+{{ define "head-scripts" }}
+<script src="https://www.google.com/recaptcha/api.js?render=6LdbEH4UAAAAACLDkIjp5Smoq-i-gvYefazevxYK"></script>
+{{ end }}
+
+{{ define "main" }}
+<main class="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">{{ .Title }}</h1>
+			{{- with .Params.lead }}
+			<p class="post__lead">{{ . }}</p>
+			{{- end }}
+		</header>
+
+		<div class="content post__content clearfix">
+      <form class="contact-form">
+        <label for="name">
+          Name: <input required type="text" id="name" name="name" autofocus autocomplete="name"/>
+        </label>
+        <label for="phone">
+          Phone Number: <input required id="phone" name="phone" inputmode="tel" type="tel"/>
+        </label>
+        <label for="email">
+          Email Address: <input required id="email" name="email" type="email" autocomplete="email" inputmode="email"/>
+        </label>
+        <label for="message">
+          Message:
+          <textarea required id="message" name="message"></textarea>
+        </label>
+        <button disabled class="button secondary submit" type="button">Send</button>
+      </form>
+		</div>
+		{{- if .Params.tags }}
+		<footer class="post__footer">
+			{{ partial "post_tags.html" . }}
+		</footer>
+		{{- end }}
+	</article>
+</main>
+{{ end }}
+
+{{- define "body-scripts" -}}
+<script>
+  var token;
+  let safeToSubmit = false;
+  var submitBtn = document.querySelector('.submit');
+
+  async function submitForm() {
+    const contactName = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (contactName !== '' && phone !== '' && email !== '' && message !== '') {
+      const data = { contactName, phone, email, message };
+      const url = 'https://us-central1-gideonlabs-b4b71.cloudfunctions.net/postForm'
+
+      try {
+        await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        // const form = document.querySelector('.contact-form');
+        // const postContent = document.querySelector('.post__content');
+
+        // const h1 = document.createElement('h1');
+        // h1.textContent = 'Form successfully submitted!';
+
+        // postContent.removeChild(form);
+        // postContent.appendChild(h1);
+        location.href = 'https://gideonlabs.com/thank-you/';
+      } catch(e) {
+        console.log('This request could not be completed.')
+      }
+    }
+
+
+  }
+
+
+
+  async function checkRecaptcha(recaptchaToken) {
+    const response = await fetch('https://us-central1-gideonlabs-b4b71.cloudfunctions.net/verifyRecaptcha?token=' + recaptchaToken);
+    const body = await response.json();
+    return body;
+  }
+
+  grecaptcha.ready(async () => {
+    token = await grecaptcha.execute('6LdbEH4UAAAAACLDkIjp5Smoq-i-gvYefazevxYK', { action: 'contact' });
+    verification = await checkRecaptcha(token);
+    if ((verification.success && verification.score > 0.5) || verification.hostname === 'localhost') {
+      safeToSubmit = true;
+      submitBtn.removeAttribute('disabled');
+    }
+  });
+
+  submitBtn.addEventListener('click', submitForm, false);
+
+</script>
+{{- end -}}

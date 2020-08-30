@@ -1,0 +1,30 @@
+{
+  "name": "gideon-labs-hugo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd hugo && hugo server --disableFastRender",
+    "build": "cd hugo && hugo --minify",
+    "build:local": "rm -rf public && npm run build",
+    "deploy:staging": "firebase deploy --only hosting:staging",
+    "deploy:production": "firebase deploy --only hosting:production",
+    "start:admin": "cd gideon-admin && npm run start",
+    "build:admin": "cd gideon-admin && npm run build -- --configuration=production",
+    "deploy:admin": "firebase deploy --only hosting:admin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgoho/gideon-labs-hugo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markgoho/gideon-labs-hugo/issues"
+  },
+  "homepage": "https://github.com/markgoho/gideon-labs-hugo#readme",
+  "devDependencies": {
+    "firebase-tools": "^8.9.2",
+    "typescript": "^3.9.7"
+  }
+}

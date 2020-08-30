@@ -1,0 +1,10 @@
+---
+label: For Sale
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Title of what's being sold

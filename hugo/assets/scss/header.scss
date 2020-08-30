@@ -1,0 +1,45 @@
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+.logo {
+  grid-column: 2/4;
+  display: inline-grid;
+  grid-template-columns: repeat(6, min-content);
+
+  text-decoration: none;
+  color: var(--color-primary-dark);
+  line-height: 0.8;
+  user-select: none;
+}
+
+.gideon {
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 0.7;
+  letter-spacing: -4px;
+  grid-area: 1 / 1 / -1 / -1;
+}
+
+.labs {
+  font-size: 9.5px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  grid-area: 1 / 1 / -1 / -1;
+  justify-self: end;
+}
+
+.contact-link {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .contact-link {
+    display: inline;
+  }
+}

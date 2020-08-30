@@ -1,0 +1,12 @@
+<figure>
+  <img
+    src="{{ .Destination | safeURL }}"
+    alt="{{ .Text }}"
+    loading="lazy"
+    width="300"
+    height="300"
+  />
+  <figcaption>
+    <h4>{{ .Title }}</h4>
+  </figcaption>
+</figure>

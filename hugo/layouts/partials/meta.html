@@ -1,0 +1,18 @@
+{{ $img := print .Permalink "img/featured.png" }}
+
+{{ if .Params.thumbnail }}
+  {{ $img = print .Permalink .Params.thumbnail }}
+{{ end }}
+
+{{ $description := .Description | default .Summary }}
+
+<link rel="canonical" href="{{ .Permalink | absURL }}" />
+<meta 
+  name="description" 
+  content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description | default .Summary }}{{ end }}">
+
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ .Permalink | absURL }}" />
+<meta property="og:image" content="{{ $img | absURL }}.jpg" />
+<meta property="og:description" content="{{ $description }}" />

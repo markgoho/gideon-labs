@@ -1,0 +1,3 @@
+<div class="message-container">
+  <app-message *ngFor="let message of contactFormService.contactFormResponses$ | async" [message]="message"></app-message>
+</div>

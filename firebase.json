@@ -1,0 +1,820 @@
+{
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  },
+  "hosting": [
+    {
+      "target": "staging",
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|ico|webp|svg)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            }
+          ]
+        },
+        {
+          "source": "**/*.ico",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/x-icon"
+            }
+          ]
+        },
+        {
+          "source": "**/*.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/javascript; charset=utf-8"
+            }
+          ]
+        },
+        {
+          "source": "**/*.css",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/manifest.webmanifest",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=604800"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/manifest+json; charset=utf-8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "production",
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|ico|webp|svg)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/*.ico",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/x-icon"
+            }
+          ]
+        },
+        {
+          "source": "**/*.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/javascript; charset=utf-8"
+            }
+          ]
+        },
+        {
+          "source": "**/*.css",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/manifest.webmanifest",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=604800"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/manifest+json; charset=utf-8"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        }
+      ],
+      "redirects": [
+        {
+          "source": "posts/category/analytical-services",
+          "destination": "/categories/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/analytical-services/ion-chromatograph-analysis",
+          "destination": "/categories/ion-chromatograph-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/ion-chromatograph-analysis",
+          "destination": "/categories/ion-chromatograph-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/analytical-services/moisture-ingress-testing",
+          "destination": "/categories/moisture-ingress-testing/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/moisture-ingress-testing",
+          "destination": "/categories/moisture-ingress-testing/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/analytical-services/passivation-integrity-test",
+          "destination": "/categories/passivation-integrity-test/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/passivation-integrity-test",
+          "destination": "/categories/passivation-integrity-test/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/analytical-services/rohs-components",
+          "destination": "/categories/rohs-components/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/rohs-components",
+          "destination": "/categories/rohs-components/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/analytical-services/xrf",
+          "destination": "/categories/xrf/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/xrf",
+          "destination": "/categories/xrf/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/application-issue",
+          "destination": "/categories/application-issue/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm",
+          "destination": "/categories/component-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/capacitors",
+          "destination": "/categories/capacitor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/capacitors",
+          "destination": "/categories/capacitor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/capacitors/electrolytic",
+          "destination": "/categories/electrolytic-capacitor-failures/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/electrolytic",
+          "destination": "/categories/electrolytic-capacitor-failures/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/capacitors/film",
+          "destination": "/categories/film-capacitor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/film",
+          "destination": "/categories/film-capacitor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/capacitors/mlcc",
+          "destination": "/categories/mlcc-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/mlcc",
+          "destination": "/categories/mlcc-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/capacitors/pi-filter-failure-analysis",
+          "destination": "/categories/pi-filter-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pi-filter-failure-analysis",
+          "destination": "/categories/pi-filter-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/capacitors/ta-caps",
+          "destination": "/categories/tantalum-capacitor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/ta-caps",
+          "destination": "/categories/tantalum-capacitor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/connectors",
+          "destination": "/categories/connector-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/connectors",
+          "destination": "/categories/connector-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/gate-drivers",
+          "destination": "/categories/gate-drivers/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/gate-drivers",
+          "destination": "/categories/gate-drivers/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/oscillator-failure-analysis",
+          "destination": "/categories/oscillator-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/oscillator-failure-analysis",
+          "destination": "/categories/oscillator-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/pot",
+          "destination": "/categories/potentiometer-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pot",
+          "destination": "/categories/potentiometer-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/relays",
+          "destination": "/categories/relay-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/relays",
+          "destination": "/categories/relay-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/resistors",
+          "destination": "/categories/resistor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/resistors",
+          "destination": "/categories/resistor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics",
+          "destination": "/categories/semiconductor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/ics",
+          "destination": "/categories/semiconductor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/diode",
+          "destination": "/categories/diode-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/diode",
+          "destination": "/categories/diode-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/failure-analysis-of-op-amp",
+          "destination": "/categories/failure-analysis-of-op-amp/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/failure-analysis-of-op-amp",
+          "destination": "/categories/failure-analysis-of-op-amp/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/failure-analysis-of-transistors",
+          "destination": "/categories/failure-analysis-of-transistors/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/failure-analysis-of-transistors",
+          "destination": "/categories/failure-analysis-of-transistors/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/mosfet",
+          "destination": "/categories/fet-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/mosfet",
+          "destination": "/categories/fet-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/igbt",
+          "destination": "/categories/igbt-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/igbt",
+          "destination": "/categories/igbt-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/laser-failures",
+          "destination": "/categories/laser-failures/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/laser-failures",
+          "destination": "/categories/laser-failures/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/opto",
+          "destination": "/categories/optical-coupler-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/opto",
+          "destination": "/categories/optical-coupler-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/photo",
+          "destination": "/categories/phototransistor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/photo",
+          "destination": "/categories/phototransistor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/amplifier",
+          "destination": "/categories/power-amplifier-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/amplifier",
+          "destination": "/categories/power-amplifier-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/pwm-failure-analysis",
+          "destination": "/categories/pwm-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pwm-failure-analysis",
+          "destination": "/categories/pwm-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/rectifier",
+          "destination": "/categories/rectifier-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/rectifier",
+          "destination": "/categories/rectifier-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/silicon-controlled-rectifier",
+          "destination": "/categories/silicon-controlled-rectifier/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/silicon-controlled-rectifier",
+          "destination": "/categories/silicon-controlled-rectifier/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/triac",
+          "destination": "/categories/triac-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/triac",
+          "destination": "/categories/triac-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/ics/regulator",
+          "destination": "/categories/voltage-regulator-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/regulator",
+          "destination": "/categories/voltage-regulator-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/sensor-failure-analysis",
+          "destination": "/categories/sensor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/sensor-failure-analysis",
+          "destination": "/categories/sensor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/wire",
+          "destination": "/categories/stranded-wire-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/wire",
+          "destination": "/categories/stranded-wire-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/transformer-analysis",
+          "destination": "/categories/transformer-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/transformer-analysis",
+          "destination": "/categories/transformer-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/components-htm/tvs",
+          "destination": "/categories/transient-voltage-suppressor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/tvs",
+          "destination": "/categories/transient-voltage-suppressor-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/contamination-2",
+          "destination": "/categories/contamination-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/failure-analysis",
+          "destination": "/categories/failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/ftir",
+          "destination": "/categories/ftir/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/failure-analysis-of-ics-integrated-circuit",
+          "destination": "/categories/ic-failure-analysis-integrated-circuit/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/analysis",
+          "destination": "/categories/inorganic-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/li-ion-batteries",
+          "destination": "/categories/li-ion-batteries/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/metallurgy",
+          "destination": "/categories/metallurgy/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/organic-analysis",
+          "destination": "/categories/organic-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/ps-analysis",
+          "destination": "/categories/power-supply-failures/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb",
+          "destination": "/categories/pcb-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/bga",
+          "destination": "/categories/bga-failure/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/contamination",
+          "destination": "/categories/contamination-analysis-on-pcb/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/contamination",
+          "destination": "/categories/contamination-analysis-on-pcb/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/x-sections",
+          "destination": "/categories/cross-sections-of-components-on-pcbs/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/x-sections",
+          "destination": "/categories/cross-sections-of-components-on-pcbs/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/fires",
+          "destination": "/categories/fires/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/fires",
+          "destination": "/categories/fires/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/flex-circuits",
+          "destination": "/categories/flex-circuits/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/flex-circuits",
+          "destination": "/categories/flex-circuits/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/printed-circuit-board-failure-analysis",
+          "destination": "/categories/pcb-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/printed-circuit-board-failure-analysis",
+          "destination": "/categories/pcb-failure-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/standards",
+          "destination": "/categories/pcb-qualification/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/standards",
+          "destination": "/categories/pcb-qualification/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/pcb/qc",
+          "destination": "/categories/pcb-quality-control/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/qc",
+          "destination": "/categories/pcb-quality-control/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/radiography",
+          "destination": "/categories/radiography/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/sem-eds",
+          "destination": "/categories/sem-eds/",
+          "type": 301
+        },
+        {
+          "source": "/posts/category/success-stories",
+          "destination": "/categories/success-stories/",
+          "type": 301
+        },
+        {
+          "source": "/wp-admin/",
+          "destination": "/",
+          "type": 301
+        },
+        {
+          "source": "/inductive-coupled-plasma-and-atomic-absorption-icp-and-aa/",
+          "destination": "/analytical-services/inductive-coupled-plasma-and-atomic-absorption-icp-and-aa/",
+          "type": 301
+        },
+        {
+          "source": "/request/",
+          "destination": "/contact/",
+          "type": 301
+        },
+        {
+          "source": "/thermal.htm",
+          "destination": "/analytical-services/thermal-analysis/",
+          "type": 301
+        }
+      ]
+    },
+    {
+      "target": "admin",
+      "public": "gideon-admin/dist/gideon-admin",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|ico|webp|svg)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/*.ico",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/x-icon"
+            }
+          ]
+        },
+        {
+          "source": "**/*.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/javascript; charset=utf-8"
+            }
+          ]
+        },
+        {
+          "source": "**/*.css",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/manifest.webmanifest",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=604800"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/manifest+json; charset=utf-8"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

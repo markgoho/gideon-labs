@@ -1,0 +1,8 @@
+<h1>
+  <a href="mailto:{{message.email}}">{{ message.contactName }}</a>
+  <span> - </span>
+  <a href="tel:{{message.phone}}">{{message.phone}}</a>
+</h1>
+<h2>Sent: {{ message.submitted | date }}</h2>
+<h3>Message:</h3>
+<p>{{ message.message}}</p>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {{ partial "head.html" . }}
+
+    {{- block "scripts" . -}}
+    {{- end -}}
+
+    {{- block "head-scripts" . -}}
+    {{- end -}}
+  </head>
+
+
+  <body class="body">
+    <div class="banner">COVID-19 Update: Gideon Labs is open and is continuing to provide services.</div>
+    <div class="container container--outer">
+      {{ partial "header" . }}
+      {{ block "above-content" .}}
+      {{ end }}
+      <div class="wrapper flex">
+        <div class="primary">
+        {{ block "main" . }}
+          {{ with .Content }}
+          <div class="content main__content clearfix">
+            {{ . }}
+          </div>
+          {{ end }}
+        {{ end }}
+        </div>
+        {{ partial "sidebar.html" . }}
+      </div>
+      {{ block "below-content" .}}
+      {{ end }}
+      {{ partial "footer" . }}
+    </div>
+    {{ $opts := dict "targetPath" "main.js"  }}
+    {{ $built := resources.Get "ts/main.ts" | js.Build $opts | resources.Minify | resources.Fingerprint }}
+    <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+    {{- block "body-scripts" . -}}
+    {{- end -}}
+  </body>
+</html>

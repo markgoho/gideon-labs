@@ -1,0 +1,24 @@
+{{ define "above-content" }}
+{{ partial "hero.html" }}
+{{ end }}
+
+{{ define "main" }}
+<main class="main list">
+	{{- with .Content }}
+	<div class="content main__content clearfix">
+		{{ . }}
+	</div>
+  {{- end }}
+
+  <h2>Recent Success Stories</h2>
+	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+	{{- range $paginator.Pages }}
+		{{- .Render "summary" }}
+	{{- end }}
+</main>
+<a href="/posts/" class="button">Read more Success Stories</a>
+{{ end }}
+
+{{ define "below-content" }}
+{{ partial "steps.html" }}
+{{ end }}
