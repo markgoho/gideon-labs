@@ -2,7 +2,8 @@
 title: Specifications
 pageTitle: Specifications and Test Methods
 menu:
-  main: {}
+  main:
+    weight: 3
 
 ---
 ## Specifications and Test Methods for the Electronic Component Industry

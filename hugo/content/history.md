@@ -1,9 +1,11 @@
 ---
 title: History
 pageTitle: History of Gideon Analytical Labs
-menu: main
----
+menu:
+  main:
+    weight: 4
 
+---
 Gideon Analytical Laboratories, Inc. has benefited from downsizing of several major companies. Our people represent over 70 years’ experience in chemical, construction, materials and failure analysis of electronic components (relays, transformers, chokes, capacitors, resistors, fans, cable, connectors, etc.) PWBs (solder mask cure, embedded tin in the solder mask causing electromigration, voiding in the resin, PTH opens, cross sections, solder joint reliability, IPC specifications and Military standards, etc.) and semiconductors (diodes, FETs, PWMs, oscillators, thyristers, SCRs, rectifiers, interconnect and packaging problems, etc.). We have supported the designing, building, debugging, and testing of electronic components used in computer products, mainframe, 3rd rail, automotive, trains, aerospace, consumer electronics, amplifiers, radios, nuclear reactors, etc. We have approved materials, qualified card manufacturers, power supply manufacturers, cable manufacturers, qualified manufacturing lines, audited lines to insure compliance and approved component manufacturers. We have resolved electronic packaging problems involving many companies’ products. We have written many of the specifications and qualification plans required to eliminate these problems.
 
 We offer engineers the analytical and chemical analysis they require to assess reliability, construction integrity, materials compatibility, process control and manufacturing quality. We can perform failure analysis on new technologies and old. Check our “Success Stories” page to see the results.
