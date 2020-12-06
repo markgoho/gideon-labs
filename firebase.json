@@ -3,13 +3,18 @@
     "predeploy": [
       "npm --prefix \"$RESOURCE_DIR\" run lint",
       "npm --prefix \"$RESOURCE_DIR\" run build"
-    ]
+    ],
+    "source": "functions"
   },
   "hosting": [
     {
       "target": "staging",
       "public": "public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "headers": [
         {
           "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font|css)",
@@ -90,7 +95,11 @@
     {
       "target": "production",
       "public": "public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "headers": [
         {
           "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font)",
@@ -720,7 +729,11 @@
     {
       "target": "admin",
       "public": "gideon-admin/dist/gideon-admin",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "rewrites": [
         {
           "source": "**",
