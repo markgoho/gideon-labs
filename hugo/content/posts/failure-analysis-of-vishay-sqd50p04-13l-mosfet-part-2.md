@@ -1,6 +1,7 @@
 +++
 categories = []
 date = 2019-11-07T05:00:00Z
+featured_image = ""
 pictures = ["/uploads/mosfet part 2-3.PNG", "/uploads/mosfet part 2-2.PNG", "/uploads/mosfet part 2.PNG"]
 title = "Failure Analysis of Vishay SQD50P04-13L MOSFET (Part 2)"
 
@@ -19,7 +20,7 @@ A Tektronix TDS-7104 1GHz oscilloscope was used for all active circuit probing. 
 
 ### 1.2.1 Initial Application of Battery Power
 
-The LUCAS device is primarily intended to operate from battery power. The battery supplied is a 24VDC Li-ion pack with a 4AH capacity rating. No other battery specifications were supplied. The included charger was used before testing to ensure that all batteries were at the peak charge level, as shipping regulations generally require a pack to be charged to no more than 30% capacity prior to being shipped as air freight.
+The device is primarily intended to operate from battery power. The battery supplied is a 24VDC Li-ion pack with a 4AH capacity rating. No other battery specifications were supplied. The included charger was used before testing to ensure that all batteries were at the peak charge level, as shipping regulations generally require a pack to be charged to no more than 30% capacity prior to being shipped as air freight.
 
 Instrumentation was connected as follows:
 
@@ -27,11 +28,11 @@ Instrumentation was connected as follows:
 * Channel 2 1GHz 10x single-ended probe from Drain to Source of Q27
 * Channel 3 1GHz 10x single-ended probe from Gate to Source of Q27
 
-Immediately after connecting the battery to the unit, a large current inrush was noted and shown in the plot. 
+Immediately after connecting the battery to the unit, a large current inrush was noted and shown in the plot.
 
-The plot shows an initial inrush current of over 36A from the battery pack followed by a slow decline to 0A for roughly 150us. During this period the Drain-to-Source voltage (Vds) remained relatively high. This high Drain current, when combined with the relatively high Drain voltage, is close to the Safe Operating Area of the MOSFET, falling roughly half-way between the 1ms and 100us operating points. The test was repeated with the same results. 
+The plot shows an initial inrush current of over 36A from the battery pack followed by a slow decline to 0A for roughly 150us. During this period the Drain-to-Source voltage (Vds) remained relatively high. This high Drain current, when combined with the relatively high Drain voltage, is close to the Safe Operating Area of the MOSFET, falling roughly half-way between the 1ms and 100us operating points. The test was repeated with the same results.
 
-With this number of plug-ins, the battery electrodes caused irregular waveforms. 
+With this number of plug-ins, the battery electrodes caused irregular waveforms.
 
 ### 1.2.2 Simulation
 
@@ -47,7 +48,7 @@ Much like the physical test, a large, instantaneous dissipation is seen upon the
 
 Having determined that a likely cause of the MOSFET failures was during the initial connection of the battery pack, a closer look was taken at the circuit.
 
-It should be noted in the waveforms above that MOSFET gate voltage does not stay at zero, but instead immediately jumps to **roughly -4V** once the battery is connected. This is caused by the Reverse Transfer Capacitance of the FET allowing energy to couple from Drain to the Gate in a capacitive fashion. 
+It should be noted in the waveforms above that MOSFET gate voltage does not stay at zero, but instead immediately jumps to **roughly -4V** once the battery is connected. This is caused by the Reverse Transfer Capacitance of the FET allowing energy to couple from Drain to the Gate in a capacitive fashion.
 
 The coupled energy causes the Gate voltage to exceed the threshold voltage of the device. For the SQD50P04-13 device, the **Threshold Voltage is roughly -2.5VDC**. Exceeding this voltage will result in an enhancement of the MOSFET and subsequent Drain current flow.
 
@@ -65,12 +66,12 @@ The waveform below illustrates the impact of changing R95 and R96 to 10k ohms. N
 
 After a number of plots and manipulation of the circuit, there were still more things we needed to have to fix and reverse engineer this complex PCB.
 
- The **failure of Q27** appears to be related to high dV/dt induced turn-on as a result of excessively high external Gate-to-Source impedance. This excessive impedance allows for the device’s internal Reverse Transfer Capacitance to couple significant energy to the Gate terminal, exceeding the devices turn-on threshold voltage, thus causing device Q27 to conduct significant current and potentially exceed the Safe Operating Area of the device during initial connection of the battery pack.
+The **failure of Q27** appears to be related to high dV/dt induced turn-on as a result of excessively high external Gate-to-Source impedance. This excessive impedance allows for the device’s internal Reverse Transfer Capacitance to couple significant energy to the Gate terminal, exceeding the devices turn-on threshold voltage, thus causing device Q27 to conduct significant current and potentially exceed the Safe Operating Area of the device during initial connection of the battery pack.
 
 It is recommended the gate pulldown resistors R95 and R96 be reduced from 100k ohms to 10k ohms to reduce the impact of the initial turn on. Additionally, it is recommended an additional Gate capacitance be added to Q27 to reduce the initial Gate voltage, thus directly reducing the magnitude of the initial inrush current.
 
 The **failure of device Q14** is likely a sympathetic failure to that of the failure of Q27. Computer simulation indicates that a sudden low-impedance produced at the Q27 Gate-to-Source juncture during the peak of the input inrush will cause a sudden destabilization of the Q9/Q14 control network. This destabilization will result in a large current oscillation between the battery pack and the soft-start network output capacitance, ultimately resulting in a destructive over-voltage avalanche of Q14.
 
-Many circuit issues are complicated requiring waveform testing, design, and component selection, failure analysis and pulling all the information together to give the corrective action. This job required more information which we got and the ultimate fix is in part 3. 
+Many circuit issues are complicated requiring waveform testing, design, and component selection, failure analysis and pulling all the information together to give the corrective action. This job required more information which we got and the ultimate fix is in part 3.
 
-Call Gideon when you have failed PCB, components, or design issues. We are very good.  
+Call Gideon when you have failed PCB, components, or design issues. We are very good.
