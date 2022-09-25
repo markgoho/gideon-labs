@@ -8,3 +8,5 @@ fields:
     required: false
   label: Title
   description: Title of what's being sold
+pages:
+- hugo/content/for-sale/terex-l600-crawler-loader.md
