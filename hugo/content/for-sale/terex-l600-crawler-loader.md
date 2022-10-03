@@ -6,7 +6,7 @@ title = "Terex L600 Crawler Loader"
 
 This is a 6-in-line 4-stroke diesel. 6000 hours.
 
-Have many extra filters, parts manual, service manual, parts, and hydraulic kits for rebuilding bucket cylinders, new batteries (1-month-old), new battery enclosure, many new hoses, tracks are new with maybe 10-15 hours on them. Can push over a 30-inch tree without digging it out.  The bucket is 3 yards.  There are no leaks and the engine runs fine.
+Have many extra filters, parts manual, service manual, parts, and hydraulic kits for rebuilding bucket cylinders, new batteries (1-month-old), new battery enclosure, many new hoses, tracks are new with maybe 10-15 hours on them. Can push over a 30-inch tree without digging it out.  The bucket is 3 yards.  There are minor leaks and the engine runs fine.
 
 Price $20800
 
