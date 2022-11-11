@@ -11,26 +11,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: 'true'
-      - uses: actions/setup-node@v2-beta
+      - run: |
+          curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \
+          | grep browser_download_url \
+          | grep Linux-64bit.deb \
+          | grep extended \
+          | cut -d '"' -f 4 \
+          | wget -i -
+          sudo dpkg -i hugo*_Linux-64bit.deb
+      - run: cd hugo && hugo --minify
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          node-version: '12'
-      - name: Install Hugo
-        run: sudo snap install hugo --channel=extended
-      - name: Cache node modules
-        uses: actions/cache@v2
-        id: cache
-        with:
-          path: node_modules
-          key: v1-${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            v1-${{ runner.os }}-node-
-      - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm i
-      - name: Build
-        run: npm run build
-      - name: Deploy
-        run: npm run deploy:production -- --token ${{ secrets.FIREBASE_TOKEN }}
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live
+          projectId: gideonlabs-b4b71
