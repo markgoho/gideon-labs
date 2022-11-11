@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'hugo/**'
+      - '.github/workflows/deploy-hugo.yml'
     branches:
       - master
 
