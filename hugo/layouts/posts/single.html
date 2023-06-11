@@ -2,7 +2,9 @@
 <main class="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">{{ .Title }}</h1>
+			<h1 class="post__title" style="view-transition-name: post-{{ .Title | md5 }};">
+        {{ .Title }}
+      </h1>
 			{{- with .Params.lead }}
 			<p class="post__lead">{{ . }}</p>
 			{{- end }}

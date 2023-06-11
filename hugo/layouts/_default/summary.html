@@ -27,7 +27,7 @@
 	</figure>
 	{{- end }}
 	<header class="list__header">
-		<h3 class="list__title post__title ">
+		<h3 class="list__title post__title" style="view-transition-name: post-{{ .Title | md5 }};">
 			<a href="{{ .RelPermalink }}" rel="bookmark">
 			{{ .Title }}
 			</a>
