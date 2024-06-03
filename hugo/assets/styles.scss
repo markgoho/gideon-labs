@@ -10,6 +10,10 @@
 @import './scss/steps';
 @import './scss/categories';
 
+@view-transition {
+  navigation: auto;
+}
+
 body {
   margin: 0;
   background-color: #f9f8f6;
