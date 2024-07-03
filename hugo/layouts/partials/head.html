@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
 {{ if .IsHome }}
 Gideon Analytical Labs - Problem Solvers of the Electronic Industry
@@ -8,10 +9,6 @@ Gideon Analytical Labs - Problem Solvers of the Electronic Industry
 {{ .Params.pageTitle | default .Title }} - {{ .Site.Title }}
 {{ end }}
 </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
-
 {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" ) }}
 {{ $style := resources.Get "styles.scss" | resources.ToCSS $options | resources.Fingerprint}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
@@ -19,14 +16,15 @@ Gideon Analytical Labs - Problem Solvers of the Electronic Industry
 <link rel="preload" href="/fonts/FuturaBT-Book.woff2" as="font" crossorigin />
 <link rel="preload" href="/fonts/FuturaBT-Heavy.woff2" as="font" crossorigin />
 <link rel="preload" href="/fonts/FuturaBT-Light.woff2" as="font" crossorigin />
-<link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preconnect" href="https://www.google-analytics.com" />
 
+<script defer src="https://api.pirsch.io/pa.js"
+    id="pianjs"
+    data-code="Ob90nY3cUrnwUb83t5Uc7ZQ1jLhmNBvW"></script>
+
+<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
 <meta name="theme-color" content="#341f1e" />
 <link rel="manifest" href="/manifest.webmanifest" />
-
 <link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" />
-
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
@@ -34,7 +32,3 @@ Gideon Analytical Labs - Problem Solvers of the Electronic Industry
 {{- block "meta" . -}}
 {{ partial "meta.html" . }}
 {{- end -}}
-
-<script defer src="https://api.pirsch.io/pa.js"
-    id="pianjs"
-    data-code="Ob90nY3cUrnwUb83t5Uc7ZQ1jLhmNBvW"></script>
