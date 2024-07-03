@@ -22,17 +22,17 @@ Gideon Analytical Laboratories has worked on thousands of different electrical p
 ![Sample 2 micrograph of contamination on outer contact](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-2-micrograph-of-contamination-on-outer-contact.jpg 'Sample 2 micrograph of contamination on outer contact')
 ![Sample 2, one of the contacts](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-2-one-of-the-contacts.jpg 'Sample 2, one of the contacts')
 ![Sample 2, the gold was pretty much off this contact](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-2-the-gold-was-pretty-much-off-this-contact.jpg 'Sample 2, the gold was pretty much off this contact')
-{{< picture src="Sample-2-SEM-EDS-shows-chloride" alt="Sample 2 SEM-EDS shows chloride"  caption="Sample 2 SEM-EDS shows chloride" >}}
-{{< picture src="Sample-2-white-deposition-on-contact" alt="Sample 2, white deposition on contact"  caption="Sample 2, white deposition on contact" >}}
-{{< picture src="RY4S-UAC110-120V-power-relay" alt="RY4S-UAC110-120V power relay"  caption="RY4S-UAC110-120V power relay" >}}
-{{< picture src="RY4S-UAC110-120V-power-relay-cover-off" alt="RY4S-UAC110-120V power relay cover off"  caption="RY4S-UAC110-120V power relay cover off" >}}
-{{< picture src="RY4S-UAC110-120V-power-relay-cover-off-pic-2" alt="RY4S-UAC110-120V power relay cover off"  caption="RY4S-UAC110-120V power relay cover off" >}}
-{{< picture src="Sample-1-Corrosion-can-be-seen-on-the-contacts" alt="Sample 1, Corrosion can be seen on the contacts"  caption="Sample 1, Corrosion can be seen on the contacts" >}}
-{{< picture src="Sample-1-corrision-on-the-contacts" alt="Sample 1, corrosion on the contacts"  caption="Sample 1, corrosion on the contacts" >}}
-{{< picture src="Sample-1-electron-maganet-shows-corrosion" alt="Sample 1, electron maganet shows corrosion"  caption="Sample 1, electron maganet shows corrosion" >}}
+![Sample 2 SEM-EDS shows chloride](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-2-SEM-EDS-shows-chloride.jpg 'Sample 2 SEM-EDS shows chloride')
+![Sample 2, white deposition on contact](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-2-white-deposition-on-contact.jpg 'Sample 2, white deposition on contact')
+![RY4S-UAC110-120V power relay](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/RY4S-UAC110-120V-power-relay.jpg 'RY4S-UAC110-120V power relay')
+![RY4S-UAC110-120V power relay cover off](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/RY4S-UAC110-120V-power-relay-cover-off.jpg 'RY4S-UAC110-120V power relay cover off')
+![RY4S-UAC110-120V power relay cover off](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/RY4S-UAC110-120V-power-relay-cover-off-pic-2.jpg 'RY4S-UAC110-120V power relay cover off')
+![Sample 1, Corrosion can be seen on the contacts](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-Corrosion-can-be-seen-on-the-contacts.jpg 'Sample 1, Corrosion can be seen on the contacts')
+![Sample 1, corrosion on the contacts](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-corrision-on-the-contacts.jpg 'Sample 1, corrosion on the contacts')
+![Sample 1, electron maganet shows corrosion](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-electron-maganet-shows-corrosion.jpg 'Sample 1, electron maganet shows corrosion')
 ![Sample 1, core of electron magnet, FTIR used on white deposits](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-core-of-electron-maganet-FTIR-used-on-white-deposits.jpg 'Sample 1, core of electron magnet, FTIR used on white deposits')
 ![Sample 1, corrosion on armature contact point](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-corrosion-on-armature-contact-point.jpg 'Sample 1, corrosion on armature contact point')
-{{< picture src="Sample-1-armature-spectrum-shows-chloride" alt="Sample 1 armature spectrum shows chloride"  caption="Sample 1 armature spectrum shows chloride" >}}
-{{< picture src="Sample-1-SEM-micrograph-of-contact" alt="Sample 1 SEM micrograph of contact"  caption="Sample 1 SEM micrograph of contact" >}}
-{{< picture src="Sample-1-electron-maganet-core-SEM-EDS-spectra-shows-chloride" alt="Sample 1 electron magnet core SEM-EDS spectra shows chloride"  caption="Sample 1 electron magnet core SEM-EDS spectra shows chloride" >}}
+![Sample 1 armature spectrum shows chloride](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-armature-spectrum-shows-chloride.jpg 'Sample 1 armature spectrum shows chloride')
+![Sample 1 SEM micrograph of contact](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-SEM-micrograph-of-contact.jpg 'Sample 1 SEM micrograph of contact')
+![Sample 1 electron magnet core SEM-EDS spectra shows chloride](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-electron-maganet-core-SEM-EDS-spectra-shows-chloride.jpg 'Sample 1 electron magnet core SEM-EDS spectra shows chloride')
 ![Sample 1 contamination is crusty material](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Sample-1-contamination-is-crusty-material.jpg 'Sample 1 contamination is crusty material')

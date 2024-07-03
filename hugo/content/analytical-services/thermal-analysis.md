@@ -4,7 +4,7 @@ title: Thermal Analysis
 
 ## Application
 
-{{< picture src="tg209" alt="thermal analysis" >}}
+![Thermal analysis](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/tg209.jpg 'Thermal analysis')
 Thermal analysis is used to characterize materials by measuring physical and reactive properties as a function of temperature. Temperature range becomes one of the most important criteria when considering such applications as the transportation industry, 3rd rail where voltage spikes and current are high for short durations, and electronic equipment exposed to the elements. Matching the materials in electronic packaging, polymer potting, and encapsulation is important to ensure product integrity in these environments.
 
 Thermal analysis (TA) offers the ability to evaluate and compare materials. The information TA provides includes:

@@ -2,7 +2,7 @@
 title: Gas chromatography–mass spectrometry
 ---
 
-{{< picture src="GCMS-TIC-1" alt="gcms" >}}
+![GCMS](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/GCMS-TIC-1.jpg 'GCMS')
 
 GC analysis is a common confirmation test. GC analysis separates all of the components in a sample and provides spectral output. The sample is injected in the GC port. The GC vaporizes the sample, separates and analyzes the various components. Each component produces a spectral peak that is recorded on a paper (intensity vs retention time). The time elapsed between injection and elution is called the "retention time." The retention time differentiates the different components within the sample. The area under the peaks is proportional to the quantity of the corresponding substances in the sample analyzed. The peak is integrated to give the area under the peak. The bottom of the peak is the base line.
 

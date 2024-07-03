@@ -23,7 +23,7 @@ Gideon Analytical Laboratories found no evidence of corrosion, facet oxidation, 
 
 Gideon Analytical Laboratories helped dozens of companies in the electronics industry overcome problems in design, manufacture, or in the field. Companies can save time and money by contacting Gideon Analytical Laboratories and having failure analysis or analytical work performed. Companies can rest assured and receive peace of mind that they know the causes of failures and how to fix them.
 
-![TO-46 VCSEL package](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/1suspect-7.jpg 'TO-46 VCSEL package')w_300/GideonLabs/1suspect-7.jpg 'TO-46 VCSEL package')
-{{< picture src="die-image-1"alt="VCSEL die ready for EDS analysis" caption="VCSEL die ready for EDS analysis" >}}
+![TO-46 VCSEL package](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/1suspect-7.jpg 'TO-46 VCSEL package')
+![VCSEL die ready for EDS analysis](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/die-image-1.jpg 'VCSEL die ready for EDS analysis')
 ![Contaminated VCSEL window](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/2suspect-1.jpg 'Contaminated VCSEL window')GideonLabs/2suspect-1.jpg 'Contaminated VCSEL window')
 ![outside glass contaminate-2](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/outside-glass-contaminate-2.jpg 'Window contamination')s/outside-glass-contaminate-2.jpg 'Window contamination')

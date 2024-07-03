@@ -2,7 +2,7 @@
 title: X-Ray Radiography
 ---
 
-{{< picture src="IMG_5279" alt="Radiography machine" >}}
+![Radiography machine](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/IMG_5279.jpg 'Radiography machine')
 
 ## Nordson Dage XD7600NT Diamond Radiography
 
@@ -25,13 +25,13 @@ Gideon has the latest XD7600NT Diamond X-ray inspection system, the ultimate cho
 - 70° Oblique Views without Loss of Magnification
 - AXiS - Active X-ray Image Stabilization
 
-{{< picture src="IMG_5285" alt="Radiography internal unit" >}}
-{{< picture src="die-2" alt="die 2" >}}
-{{< picture src="die-3" alt="die 3" >}}
-{{< picture src="5-bad1" alt="5-bad1" >}}
-{{< picture src="2pcb-resistor-1" alt="2pcb-resistor-1" >}}
-{{< picture src="2diode-3" alt="2diode-3" >}}
-{{< picture src="good" alt="good" >}}
-{{< picture src="test1" alt="test1" >}}
-{{< picture src="die-43" alt="die-43" >}}
-{{< picture src="tvl1-21" alt="tvl1-21" >}}
+![Radiography internal unit](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/IMG_5285.jpg 'Radiography internal unit')
+![die 2](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/die-2.jpg 'die 2')
+![die 3](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/die-3.jpg 'die 3')
+![5-bad1](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/5-bad1.jpg '5-bad1')
+![2pcb-resistor-1](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/2pcb-resistor-1.jpg '2pcb-resistor-1')
+![2diode-3](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/2diode-3.jpg '2diode-3')
+![good](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/good.jpg 'good')
+![test1](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/test1.jpg 'test1')
+![die-43](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/die-43.jpg 'die-43')
+![tvl1-21](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/tvl1-21.jpg 'tvl1-21')

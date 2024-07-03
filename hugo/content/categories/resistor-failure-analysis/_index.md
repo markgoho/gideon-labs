@@ -3,7 +3,9 @@ name: Resistor Failure Analysis
 title: Resistor Failure Analysis
 ---
 
-{{< picture src="resist5" alt="resistor diagram" >}}
+![resistor diagram](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/resist5.jpg 'resistor diagram')
+
+# Table
 
 | Number | Name            | Material                   |
 | ------ | --------------- | -------------------------- |

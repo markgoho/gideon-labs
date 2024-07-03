@@ -4,7 +4,7 @@ title: Inductive Coupled Plasma and Atomic Absorption
 
 ## Graphite Furnace AA (GFAA)
 
-{{< picture src="aa-55" alt="aa-55" >}}
+![aa-55](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/aa-55.jpg 'aa-55')
 
 This technique often allows for 1000-fold greater sensitivity than flame AA. Instead of utilizing a flame to atomize the sample, an electrical current is passed through a graphite tube which contains the analyte. The resonant wavelength of choice from the spectral lamp passes through the center of the graphite tube with the sample vapor. The atomized element absorbs the light energy over time. The area under the Time-Absorbance curve is most often the parameter of choice used to determine concentration by way of a calibration curve. Zeeman AA makes use of the absorbed spectral lines being split in the presence of a strong magnetic field. That splitting can be used to compensate for over two (2) units of background absorbance.
 
