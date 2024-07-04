@@ -1,7 +1,7 @@
 ---
 title: 'Browning Trail Camera Recon Force Failures'
 date: 2024-02-15
-featured_image: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_250/v1/GideonLabs/rad-1.jpg
+featured_image: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_250/GideonLabs/Figure_1.jpg
 categories:
   - 'Failure Analysis'
   - 'PCB Failure Analysis'
