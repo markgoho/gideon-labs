@@ -1,0 +1,9 @@
+{{- /* Returns the absolute URL of this page's Markdown twin, or "" when none exists (404, pagination pages). */ -}}
+{{- $url := "" -}}
+{{- with .OutputFormats.Get "markdown" -}}
+  {{- $url = .Permalink -}}
+  {{- if and (in (slice "home" "section" "term") $.Kind) (gt $.Paginator.PageNumber 1) -}}
+    {{- $url = "" -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

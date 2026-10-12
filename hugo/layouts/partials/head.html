@@ -29,6 +29,10 @@ Electronic Failure Analysis Lab | Gideon Labs
 <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
 
+{{ with partial "md-twin-url.html" . }}
+<link rel="alternate" type="text/markdown" href="{{ . }}">
+{{ end }}
+
 {{- block "meta" . -}}
 {{ partial "meta.html" . }}
 {{- end -}}
