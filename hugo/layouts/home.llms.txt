@@ -1,0 +1,33 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+## Analytical Services
+
+{{ with .Site.GetPage "/analytical-services" }}{{ range .Pages.ByTitle }}{{ partial "llms-entry.txt" . }}
+{{ end -}}{{ end }}
+## Components
+
+{{ with .Site.GetPage "/components" }}{{ partial "llms-entry.txt" . }}{{ end }}
+
+## Specifications
+
+{{ with .Site.GetPage "/specifications" }}{{ partial "llms-entry.txt" . }}{{ end }}
+
+## History
+
+{{ with .Site.GetPage "/history" }}{{ partial "llms-entry.txt" . }}{{ end }}
+
+## Contact
+
+{{ with .Site.GetPage "/contact" }}{{ partial "llms-entry.txt" . }}{{ end }}
+
+## Categories
+
+{{ range .Site.Taxonomies.categories.Alphabetical }}{{ partial "llms-entry.txt" .Page }}
+{{ end -}}
+
+## Optional
+
+{{ range where .Site.RegularPages "Section" "posts" }}{{ partial "llms-entry.txt" . }}
+{{ end -}}
