@@ -30,8 +30,20 @@ mediaType = "text/plain"
 baseName = "llms"
 isPlainText = true
 notAlternative = true
+[outputFormats.agentskill]
+mediaType = "text/markdown"
+baseName = "SKILL"
+path = ".well-known/agent-skills/gideon-labs"
+isPlainText = true
+notAlternative = true
+[outputFormats.agentskills]
+mediaType = "application/json"
+baseName = "index"
+path = ".well-known/agent-skills"
+isPlainText = true
+notAlternative = true
 [outputs]
-home = ["HTML", "RSS", "markdown", "llms"]
+home = ["HTML", "RSS", "markdown", "llms", "agentskill", "agentskills"]
 page = ["HTML", "markdown"]
 section = ["HTML", "RSS", "markdown"]
 taxonomy = ["HTML", "RSS", "markdown"]

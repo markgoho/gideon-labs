@@ -1,0 +1,1 @@
+{{- partial "agent-skill.md" . -}}
