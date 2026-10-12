@@ -89,6 +89,15 @@
               "value": "application/manifest+json; charset=utf-8"
             }
           ]
+        },
+        {
+          "source": "**/*.md",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/markdown; charset=utf-8"
+            }
+          ]
         }
       ]
     },
@@ -184,6 +193,15 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
+            }
+          ]
+        },
+        {
+          "source": "**/*.md",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/markdown; charset=utf-8"
             }
           ]
         }

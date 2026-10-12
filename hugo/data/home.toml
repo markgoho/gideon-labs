@@ -1,0 +1,9 @@
+tagline = "We Solve Problems for the Electronic Industry"
+subheader = "Failure analysis, electrical testing, process evaluation and testing to many specifications."
+cta = "Start solving"
+stepsTitle = "How It Works"
+steps = [
+  "Provide Gideon Labs with information about your failure",
+  "We use a variety of industry techniques to diagnose the failure",
+  "You get a comprehensive report of why the failure occurred",
+]

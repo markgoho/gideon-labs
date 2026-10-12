@@ -1,10 +1,10 @@
 <section class="hero-container">
   <div class="hero-text">
-    <h1 class="hero-tagline">We Solve Problems for the Electronic Industry</h1>
+    <h1 class="hero-tagline">{{ hugo.Data.home.tagline }}</h1>
     <h2 class="sub-header">
-      Failure analysis, electrical testing, process evaluation and testing to many specifications.
+      {{ hugo.Data.home.subheader }}
     </h2>
-    <a href="/contact/" class="call-to-action">Start solving</a>
+    <a href="/contact/" class="call-to-action">{{ hugo.Data.home.cta }}</a>
   </div>
 
   <picture>

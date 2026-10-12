@@ -19,3 +19,20 @@ recent_num = 5
 tags_counter = false
 [taxonomies]
 category = "categories"
+[mediaTypes."text/markdown"]
+suffixes = ["md"]
+[outputFormats.markdown]
+mediaType = "text/markdown"
+baseName = "index"
+isPlainText = true
+[outputFormats.llms]
+mediaType = "text/plain"
+baseName = "llms"
+isPlainText = true
+notAlternative = true
+[outputs]
+home = ["HTML", "RSS", "markdown", "llms"]
+page = ["HTML", "markdown"]
+section = ["HTML", "RSS", "markdown"]
+taxonomy = ["HTML", "RSS", "markdown"]
+term = ["HTML", "RSS", "markdown"]
