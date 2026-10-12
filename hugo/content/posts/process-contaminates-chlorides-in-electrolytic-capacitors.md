@@ -16,7 +16,7 @@ The analysis was performed using an [SEM-EDS](/analytical-services/scanning-elec
 
 Failure analysis performed by Gideon Analytical Laboratories can help solve problems for a variety of companies that choose to use Gideon’s services. This analysis is used as a quality control tool; it has helped several companies to monitor potential problems from component manufacturing vendors, assembly vendors and processing vendors.
 
-The question becomes how much is the reliability of your products worth to your company? Gideon Analytical Labs can perform many specifications for customer’s needs. Knowledge of how and why a design, manufacturing, process, environmental, or mechanical failures occur can be invaluable information for a variety of companies in the electronics industry.
+The question becomes how much is the reliability of your products worth to your company? Gideon Analytical Laboratories can perform many specifications for customer’s needs. Knowledge of how and why a design, manufacturing, process, environmental, or mechanical failures occur can be invaluable information for a variety of companies in the electronics industry.
 
 ![Electrolytic capacitor terminal lead](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/electrolytic-capacitor-terminal-lead.jpg 'Electrolytic capacitor terminal lead')
 ![EDS of aluminum shank](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/EDS-of-aluminum-shank.jpg 'EDS of aluminum shank')

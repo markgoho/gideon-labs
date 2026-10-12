@@ -17,7 +17,7 @@ The die was 1988 vintage die identification near pin 13. Counterfeit parts are a
 
 This application EOS problem was corrected when the voltage input was monitored later after the failures. When the power is marginally high, it may take some time for the device to fail.
 
-Gideon Analytical Labs can save time and can identify the problem quickly. Do not let your company be exposed to failures and designs that are not thoroughly tested and proven reliable.
+Gideon Analytical Laboratories can save time and can identify the problem quickly. Do not let your company be exposed to failures and designs that are not thoroughly tested and proven reliable.
 
 ![Alumina ceramic package](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/cmos-3.jpg 'Hermetic ceramic package')
 ![Large RC die](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/cmos-1.jpg 'Two identical RC timers on the same die')

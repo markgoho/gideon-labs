@@ -8,7 +8,7 @@ categories:
   - 'Organic Analysis'
 ---
 
-Gideon Analytical Labs received a contaminated white translucent adhesive at the edge of a polyimide strip under a rubber keypad. Since most of the materials were organic, [FTIR](/analytical-services/fourier-transform-infra-red-spectroscopy/) was the method of analysis first used to determine the foreign material.
+Gideon Analytical Laboratories received a contaminated white translucent adhesive at the edge of a polyimide strip under a rubber keypad. Since most of the materials were organic, [FTIR](/analytical-services/fourier-transform-infra-red-spectroscopy/) was the method of analysis first used to determine the foreign material.
 
 The polyimide is a double-sided adhesive based flexible laminate (Kapton) film coated with adhesive on one or both and laminated to copper. There are two kinds of adhesive used in flex, epoxy, and acrylic. They each have positive and negative attributes that may make one or the other more suitable for a specific end use. The polyimide film enables the flex to bend many millions of cycles without failure. However, both acrylic and epoxy adhesives have inferior mechanical and electrical properties as compared to the Kapton core. In certain applications, the presence of an adhesive layer actually inhibits the use of flexible circuits. Therefore, a solution was needed to eliminate the adhesive layer from the substrate.
 
@@ -24,7 +24,7 @@ The white translucent adhesive at the edge of the polyimide strip from each samp
 
 All the samples contained either mineral oil or similar type oil commonly used in skin lotion, sun tan lotion (coconut oil), and many other skin care products. These types of products contain high molecular weight saturated triglycerides and mineral oil."
 
-Gideon Analytical Labs can solve many organic contamination problems. Many scans and extractions are necessary to distinguish absorbed contaminants. Our experience and database can help to elucidate these contaminants into a single spectrum and solve your contamination issue.
+Gideon Analytical Laboratories can solve many organic contamination problems. Many scans and extractions are necessary to distinguish absorbed contaminants. Our experience and database can help to elucidate these contaminants into a single spectrum and solve your contamination issue.
 
 ![Polyimide with Silicone Adhesive](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Polyimidewith-silicone.jpg 'Polyimide with Silicone Adhesive')
 ![Polyimide with Silicone Adhesive](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Polyimidewith-silicone1.jpg 'Polyimide with Silicone Adhesive')

@@ -9,7 +9,7 @@ categories:
   - 'Inorganic Analysis'
 ---
 
-Gideon Analytical Labs performed analysis on several Melexis US2881 Sensors when the designer found shorts on the returned product from the field.
+Gideon Analytical Laboratories performed analysis on several Melexis US2881 Sensors when the designer found shorts on the returned product from the field.
 
 Melexis US2881 sensors are bipolar Hall-effect switches designed in mixed signal CMOS technology. They have a wide voltage operating range from 3.5V to 24V, have high magnetic sensitivity, and a chopper-stabilized amplifier stage, and are suitable for automotive or consumer applications.
 

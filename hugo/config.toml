@@ -1,6 +1,6 @@
 baseURL = "https://gideonlabs.com/"
 enableRobotsTXT = true
-languageCode = "en-us"
+locale = "en-us"
 publishDir = "../public"
 theme = "mainroad"
 title = "Gideon Labs"

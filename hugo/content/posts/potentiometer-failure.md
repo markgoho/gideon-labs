@@ -9,7 +9,7 @@ categories:
   - 'Success Stories'
 ---
 
-Gideon Analytical Labs performed failure Analysis on a failed RJR26 Bourns Potentiometer. The application failure was noticed when a lower than expected resistance value and, eventually, open in the potentiometer.
+Gideon Analytical Laboratories performed failure Analysis on a failed RJR26 Bourns Potentiometer. The application failure was noticed when a lower than expected resistance value and, eventually, open in the potentiometer.
 
 A potentiometer (or pot) is a simple electromechanical transducer. It converts rotary or linear motion from the operator into a change of resistance, and this change is used to control the resistance within a circuit. The pot (also known as a rheostat) is essentially a variable wire wound resistor or a carbon or metal film with a swiper. A potentiometer is an example of a voltage divider consisting of resistors in series. It is commonly used to create a reference voltage, or to get a low voltage signal proportional to the voltage to be measured, and may also be used as a signal attenuator at low frequencies. For direct current and relatively low frequencies, a voltage divider may be sufficiently accurate if made only of resistors.
 

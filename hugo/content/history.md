@@ -1,6 +1,6 @@
 ---
 title: History
-pageTitle: History of Gideon Analytical Labs
+pageTitle: History of Gideon Analytical Laboratories
 menu:
   main:
     weight: 4
@@ -18,7 +18,7 @@ Military application. We were sponsored by many large semiconductor manufacturer
 
 ## Who Are We?
 
-Gideon Analytical Labs is a group of individuals who at one time handled the component reliability, testing and test procedures, material analysis, qualification, component selection, evaluations, line inspections and process approval for a large computer firm. Since the time of our departures (due to a perceived plateau and eventual reduction in mainframe sales because of increased work station capability and migration), we started an independent company whose primary focus is providing the same services to electronic companies as we did in the past for many internal customers. We have served in this industry for over 25 years.
+Gideon Analytical Laboratories is a group of individuals who at one time handled the component reliability, testing and test procedures, material analysis, qualification, component selection, evaluations, line inspections and process approval for a large computer firm. Since the time of our departures (due to a perceived plateau and eventual reduction in mainframe sales because of increased work station capability and migration), we started an independent company whose primary focus is providing the same services to electronic companies as we did in the past for many internal customers. We have served in this industry for over 25 years.
 
 The current industrial modus operandi is to let the component manufacturers provide the reliability data, failure analysis, failure rate, testing and corrective action. In this way the end users do not have to invest in capital equipment, people, and support an area that is not relevant to the main stream product line of their business. Balancing the needs (technology, strategy, survival, etc.) with skill requirements (personnel, support services, etc.) is a must for any business to remain competitive. Users of electronic components and printed circuit boards are demanding manufacturers be more responsive in providing the necessary data about:
 

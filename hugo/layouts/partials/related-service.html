@@ -1,0 +1,20 @@
+{{- $map := hugo.Data.related_services -}}
+{{- $paths := slice -}}
+{{- range .Params.categories -}}
+  {{- with index $map (. | urlize | lower) -}}
+    {{- $paths = $paths | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $paths }}{{ $paths = $map.default }}{{ end -}}
+{{- $paths = first 2 ($paths | uniq) -}}
+<aside class="related-service" aria-labelledby="related-service-title">
+  <h2 id="related-service-title" class="related-service__title">How we can help</h2>
+  <ul class="related-service__list">
+    {{- range $paths -}}
+      {{- with site.GetPage (printf "/%s" .) -}}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end -}}
+    {{- end }}
+  </ul>
+  <a href="/contact/" class="call-to-action">Request a failure analysis quote</a>
+</aside>

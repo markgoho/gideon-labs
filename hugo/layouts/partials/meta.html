@@ -1,18 +1,28 @@
-{{ $img := print .Permalink "img/featured.png" }}
-
-{{ if .Params.thumbnail }}
-  {{ $img = print .Permalink .Params.thumbnail }}
+{{ $img := "/img/microscope.png" | absURL }}
+{{ if .Params.featured_image }}
+  {{ $img = .Params.featured_image | absURL }}
+{{ else if .Params.thumbnail }}
+  {{ $thumb := printf "img/%s.jpg" .Params.thumbnail }}
+  {{ if fileExists (printf "static/%s" $thumb) }}
+    {{ $img = $thumb | absURL }}
+  {{ end }}
 {{ end }}
 
-{{ $description := .Description | default .Summary }}
+{{ $description := .Site.Params.description }}
+{{ if not .IsHome }}
+  {{ $description = .Params.description | default .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 155 }}
+{{ end }}
+
+{{ $noindex := or (and (eq .Kind "term") (lt (len .Pages) 3)) (eq .RelPermalink "/thank-you/") }}
+{{ $ogType := "website" }}
+{{ if and (eq .Section "posts") (eq .Kind "page") }}{{ $ogType = "article" }}{{ end }}
 
 <link rel="canonical" href="{{ .Permalink | absURL }}" />
-<meta
-  name="description"
-  content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description | default .Summary }}{{ end }}">
+{{ if $noindex }}<meta name="robots" content="noindex, follow">{{ end }}
+<meta name="description" content="{{ $description }}">
 
 <meta property="og:title" content="{{ .Title }}" />
-<meta property="og:type" content="article" />
+<meta property="og:type" content="{{ $ogType }}" />
 <meta property="og:url" content="{{ .Permalink | absURL }}" />
-<meta property="og:image" content="{{ $img | absURL }}.jpg" />
+<meta property="og:image" content="{{ $img }}" />
 <meta property="og:description" content="{{ $description }}" />

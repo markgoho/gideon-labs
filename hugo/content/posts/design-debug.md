@@ -12,6 +12,6 @@ Correctly left out of the epoxy area are connectors, terminal screws, and any po
 
 After review of electrical schematics, the burnt components were carrying 3 times the wattage that was supposed to be present. This extra heat, since it cannot be dissipated, burned the components.
 
-Gideon Analytical Labs has EE engineers who are at the top of their game in designing circuits and diagnosing design flaws. Gideon Analytical Labs could correct your designs also and correct the field failures.
+Gideon Analytical Laboratories has EE engineers who are at the top of their game in designing circuits and diagnosing design flaws. Gideon Analytical Laboratories could correct your designs also and correct the field failures.
 
 ![PCB with component usage issues](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/PCB-with-component-usage-issues.jpg 'PCB with component usage issues')

@@ -1,5 +1,5 @@
 ---
-title: 'Diode Failure Analysis'
+title: 'Cracked Glass Diode in a Display Socket: Failure Analysis'
 date: 2012-11-21
 featured_image: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_250/v1/GideonLabs/wamco-1.jpg
 categories:
@@ -8,7 +8,7 @@ categories:
   - 'IC Failure Analysis (Integrated Circuit)'
 ---
 
-Gideon Analytical Labs received Wamco Display Socket 4160001-1 for failure analysis. The device had a reported open diode on pin G.
+Gideon Analytical Laboratories received Wamco Display Socket 4160001-1 for failure analysis. The device had a reported open diode on pin G.
 
 This display socket is encapsulated in a plastic housing filled with a silicone rubber filler to stabilize movement of the diodes. The diodes are hermetically sealed in glass and position via plastic at one end and a socket located at the bifurcation line. The electrical data indicated the diode was open when initially measured but was intermittent when moved.
 
@@ -16,7 +16,7 @@ The glass was removed to expose the die. The die is cracked oblique to the die s
 
 The cause of the diode failure is a result of mechanical lead stressing which caused the glass to crack leaving the diode as the weakest and most vulnerable electrical link in the structure. The solder bond was broken. Once the glass cracks, it is only a matter of time before the die opens up (breaking solder contact, as it did above) or cracks (producing a short).
 
-Gideon Analytical Labs can determine the failure cause of many semiconductor and discrete components. Give us a try.
+Gideon Analytical Laboratories can determine the failure cause of many semiconductor and discrete components. Give us a try.
 
 ![Diode package](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/wamco-1.jpg 'Wamco Display Socket')
 ![Diode glass](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/wamco-2.jpg 'Glass Cracked on Pin 6')

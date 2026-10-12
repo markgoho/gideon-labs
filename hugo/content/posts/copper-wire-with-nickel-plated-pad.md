@@ -14,7 +14,7 @@ There are a number of places that have high concentrations of environmental cont
 
 If your company is experiencing some unknown failures in the field, then investigate the cause of the failure using our expertise of both electronics and chemical methods of analysis to find the cause and save your product and retain your customer.
 
-Gideon Analytical Labs can solve many different kinds of problems based on its instrumentation and experience. Use us the next time you are having a problem.
+Gideon Analytical Laboratories can solve many different kinds of problems based on its instrumentation and experience. Use us the next time you are having a problem.
 
 ![Nickel corrosion on copper pad](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/nickel-corrosion-on-copper-pad.jpg 'Nickel corrosion on copper pad')
 ![Presence of Nickel](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Presence-of-Nickel.jpg 'Presence of Nickel')

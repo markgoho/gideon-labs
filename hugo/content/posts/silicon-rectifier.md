@@ -17,7 +17,7 @@ The picture on the right is the anode. In the middle is the copper contact and t
 
 The failures all depicts a voltage overload which overwhelmed the guard ring and shorted the anode and cathode junction.
 
-Gideon routinely determines the causes of failures in electrical components. Gideon has over 350 companies that have had failure analysis performed on discrete components, ICs, transformers, capacitors, resistors, relays, etc. Because of the global market, counterfeit parts have been plaguing the industry with inferior ICs that are untraceable. Get control of your product line by using Gideon Analytical Labs' extensive experience to solve the problem.
+Gideon routinely determines the causes of failures in electrical components. Gideon has over 350 companies that have had failure analysis performed on discrete components, ICs, transformers, capacitors, resistors, relays, etc. Because of the global market, counterfeit parts have been plaguing the industry with inferior ICs that are untraceable. Get control of your product line by using Gideon Analytical Laboratories' extensive experience to solve the problem.
 
 ![EOS in silicon](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/eos-in-silicon.jpg 'EOS in silicon')
 ![Metallization contact to silicon](https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/metallization-contact-to-silicon.jpg 'Metallization contact to silicon')

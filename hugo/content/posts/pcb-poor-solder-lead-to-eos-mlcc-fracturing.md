@@ -8,7 +8,7 @@ categories:
   - 'Success Stories'
 ---
 
-Gideon Analytical Labs received two 0805 MLCC capacitors mounted on daughter boards and several good capacitors for comparison. One capacitor mounted on a PCB had multiple cracks.
+Gideon Analytical Laboratories received two 0805 MLCC capacitors mounted on daughter boards and several good capacitors for comparison. One capacitor mounted on a PCB had multiple cracks.
 
 The pictures supplied indicated several horizontal cracks. The capacitor was cleaned and cut from the remainder of the PCB and mounted for horizontal to the PCB.
 

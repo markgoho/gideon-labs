@@ -7,7 +7,7 @@ categories:
   - 'Electrolytic Capacitor Failures'
 ---
 
-Three lots of capacitors were submitted Gideon Analytical Labs for chloride and zinc contamination analysis on the terminal leads of the electrolytic capacitors.
+Three lots of capacitors were submitted Gideon Analytical Laboratories for chloride and zinc contamination analysis on the terminal leads of the electrolytic capacitors.
 
 The analysis was performed using an [SEM-EDS](/analytical-services/scanning-electron-microscopy/) system giving elemental analysis in relation to the intensity of the element at a specific wavelength or energy level (Kev). Since Kev (energy levels) for specific elements do not change, these are used to identify the elements in the sample.
 

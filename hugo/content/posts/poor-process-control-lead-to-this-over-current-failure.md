@@ -9,7 +9,7 @@ categories:
   - 'Success Stories'
 ---
 
-Gideon Analytical Labs received several printed circuit boards (PCB) with fire damage on one and electrical overstress on the LTC4258CGW module when received. One good unit was provided for comparison. The objective was to find the cause and access the risk to the customer.
+Gideon Analytical Laboratories received several printed circuit boards (PCB) with fire damage on one and electrical overstress on the LTC4258CGW module when received. One good unit was provided for comparison. The objective was to find the cause and access the risk to the customer.
 
 The LTC4258 can operate autonomously or be controlled by an I2C serial interface. Fault conditions are optionally signaled with the INT pin to eliminate software polling. External power MOSFETs, current sense resistors and diodes allow easy scaling of current and power dissipation levels and provide protection against voltage and current spikes and ESD events.
 
