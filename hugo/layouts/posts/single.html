@@ -2,7 +2,8 @@
 {{- $hidden := site.Params.hiddenCategories -}}
 {{- $terms := slice -}}
 {{- range .GetTerms "categories" }}{{ if not (in $hidden .LinkTitle) }}{{ $terms = $terms | append . }}{{ end }}{{ end -}}
-{{- $primary := index $terms 0 -}}
+{{- $primary := "" -}}
+{{- with $terms }}{{ $primary = index . 0 }}{{ end -}}
 {{- $cover := .Params.featured_image -}}
 {{- if and $cover (strings.Contains .RawContent (path.Base $cover)) }}{{ $cover = "" }}{{ end -}}
 <article>
