@@ -10,7 +10,7 @@ Gideon Analytical Labs - Problem Solvers of the Electronic Industry
 {{ end }}
 </title>
 {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" ) }}
-{{ $style := resources.Get "styles.scss" | resources.ToCSS $options | resources.Fingerprint}}
+{{ $style := resources.Get "styles.scss" | css.Sass $options | resources.Fingerprint}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 <link rel="preload" href="/fonts/FuturaBT-Book.woff2" as="font" crossorigin />
