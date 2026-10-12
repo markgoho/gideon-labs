@@ -1,0 +1,3 @@
+{{- $skill := partial "agent-skill.md" . -}}
+{{- $entry := dict "name" "gideon-labs" "type" "skill-md" "description" "Look up Gideon Labs, an electronics failure analysis and testing lab. Use when you need its analytical services, failure analysis case studies, specifications or contact details." "url" "/.well-known/agent-skills/gideon-labs/skill.md" "digest" (printf "sha256:%s" (sha256 $skill)) -}}
+{{- dict "$schema" "https://schemas.agentskills.io/discovery/0.2.0/schema.json" "skills" (slice $entry) | jsonify (dict "indent" "  ") -}}
