@@ -1,0 +1,5 @@
+{{- $url := .Permalink -}}
+{{- with .OutputFormats.Get "markdown" }}{{ $url = .Permalink }}{{ end -}}
+{{- $d := .Description | htmlUnescape -}}
+{{- if not $d }}{{ $d = .Plain | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 | htmlUnescape | htmlUnescape }}{{ end -}}
+- [{{ .Title | htmlUnescape | safeHTML }}]({{ $url | safeHTML }}){{ with $d }}: {{ . | safeHTML }}{{ end }}
