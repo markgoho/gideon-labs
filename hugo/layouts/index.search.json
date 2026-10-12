@@ -1,0 +1,8 @@
+{{- $hidden := site.Params.hiddenCategories -}}
+{{- $items := slice -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- $cats := slice -}}
+  {{- range .GetTerms "categories" }}{{ if not (in $hidden .LinkTitle) }}{{ $cats = $cats | append .LinkTitle }}{{ end }}{{ end -}}
+  {{- $items = $items | append (dict "t" .Title "u" .RelPermalink "d" (.Date.Format "January 2, 2006") "c" $cats "i" (replaceRE `c_scale,w_\d+` "c_scale,w_640" (.Params.featured_image | default "")) "s" (.Summary | plainify | htmlUnescape | truncate 140)) -}}
+{{- end -}}
+{{- $items | jsonify -}}

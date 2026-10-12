@@ -1,0 +1,265 @@
+.list-head {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 48px;
+  padding-bottom: 32px;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 720px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink-3);
+  }
+
+  .prose {
+    max-width: 760px;
+  }
+}
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+
+  input[type='search'] {
+    flex: 1 1 320px;
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line-2);
+    background: var(--surface);
+    font: inherit;
+    font-size: 16px;
+    color: var(--ink);
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 1px;
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__status {
+    font-size: 14px;
+    color: var(--muted-2);
+    min-height: 1.5em;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  &__media {
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: var(--ground);
+    }
+  }
+
+  &__body {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h2,
+  h3 {
+    font-size: 21px;
+    line-height: 1.2;
+
+    a {
+      color: var(--ink);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-3);
+  }
+
+  &__date {
+    font-size: 13px;
+    color: var(--muted-2);
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 16px;
+  padding-bottom: 80px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 12px;
+    border-radius: var(--radius-s);
+    border: 1px solid var(--line-2);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 700;
+
+    &:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    &--current {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
+
+    &--gap {
+      border: 0;
+      background: transparent;
+      color: var(--muted-2);
+      min-width: 0;
+    }
+  }
+}
+
+// Category index (/categories/).
+.term-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.term {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-weight: 700;
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &__count {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--muted-2);
+  }
+}
+
+// Service / for-sale listings.
+.service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+
+  h2 {
+    font-size: 21px;
+
+    a {
+      color: var(--ink);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-3);
+  }
+
+  &__more {
+    font-weight: 700;
+    font-size: 15px;
+  }
+}

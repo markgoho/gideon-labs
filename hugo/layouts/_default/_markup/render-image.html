@@ -1,12 +1,19 @@
-<figure>
+{{- $src := .Destination -}}
+{{- $cld := findRE `c_scale,w_\d+` $src -}}
+<figure class="fig">
+  {{- if $cld }}
   <img
-    src="{{ .Destination | safeURL }}"
+    src="{{ replaceRE `c_scale,w_\d+` "c_scale,w_800" $src | safeURL }}"
+    srcset="{{ replaceRE `c_scale,w_\d+` "c_scale,w_480" $src | safeURL }} 480w, {{ replaceRE `c_scale,w_\d+` "c_scale,w_800" $src | safeURL }} 800w, {{ replaceRE `c_scale,w_\d+` "c_scale,w_1200" $src | safeURL }} 1200w"
+    sizes="(min-width: 900px) 740px, calc(100vw - 48px)"
     alt="{{ .Text }}"
     loading="lazy"
-    width="300"
-    height="300"
+    decoding="async"
   />
-  <figcaption>
-    <h4>{{ .Title }}</h4>
-  </figcaption>
+  {{- else }}
+  <img src="{{ $src | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async" />
+  {{- end }}
+  {{- with .Title }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
 </figure>

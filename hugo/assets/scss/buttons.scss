@@ -1,27 +1,92 @@
+.btn,
+.button,
 .submit,
-.call-to-action,
-.button {
-  display: inline-block;
-  box-shadow: none;
-  border: none;
-  font-weight: 400;
-  font-size: 16px;
-  padding: 6px 16px;
-  border-radius: 6px;
-  color: #fff;
+.call-to-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
-  background-color: var(--call-to-action);
   user-select: none;
+  background: var(--call-to-action);
+  color: #fff;
 
   &:hover {
-    background-color: var(--call-to-action-hover);
+    background: var(--call-to-action-hover);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 2px;
+  }
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--ink);
+  color: var(--ink);
+
+  &:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+.btn--light {
+  background: #fff;
+  color: var(--ink);
+
+  &:hover {
+    background: var(--color-primary-tint);
+    color: var(--color-primary-dark);
+  }
+}
+
+.btn--on-dark {
+  background: #fff;
+  color: var(--color-primary-dark);
+
+  &:hover {
+    background: var(--color-primary-tint);
+    color: var(--color-primary-dark);
+  }
+}
+
+.btn--outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
   }
 }
 
-@media screen and (min-width: 769px) {
-  .call-to-action {
-    font-size: 24px;
-  }
+.btn--small {
+  min-height: 44px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn:disabled,
+.button:disabled,
+.submit:disabled {
+  background: hsl(347, 35%, 65%);
+  cursor: not-allowed;
 }

@@ -1,51 +1,76 @@
-.contact-form {
-  input,
-  textarea {
-    margin-top: 8px;
-    display: block;
-    width: 100%;
-  }
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 64px;
+  align-items: start;
+  max-width: 1000px;
 
-  textarea {
-    margin-bottom: 32px;
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 17px;
+    color: var(--ink-2);
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      font-weight: 700;
+    }
   }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 28px;
 
   label {
-    display: block;
-    font-size: 24px;
-    margin-bottom: 16px;
-    text-align: left;
-  }
-
-  label:last-child {
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
   }
 
   input,
   textarea {
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: none;
-    border: 1px solid rgb(200, 200, 200);
-    resize: none;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius-s);
+    border: 1px solid var(--line-2);
+    background: #fff;
+    font: inherit;
+    font-weight: 400;
+    color: var(--ink);
+    resize: vertical;
 
     &:focus {
-      outline: none;
-      border: 1px solid hsl(0, 0%, 50%);
+      outline: 2px solid var(--color-primary);
+      outline-offset: 1px;
+      border-color: var(--color-primary);
     }
   }
 
-  .button,
-  .message-sent {
-    margin-bottom: 32px;
+  textarea {
+    min-height: 160px;
   }
 
   .button {
-    width: 250px;
+    align-self: flex-start;
+    min-width: 200px;
+  }
 
-    &:disabled {
-      background-color: hsl(347, 55%, 55%);
-      cursor: not-allowed;
-    }
+  &__note {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted-2);
   }
 }

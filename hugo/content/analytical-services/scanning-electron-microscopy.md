@@ -1,4 +1,6 @@
 ---
+description: "Surface topography to 250,000×, EDS elemental analysis and EBIC imaging of components, boards and materials."
+weight: 1
 title: Scanning Electron Microscopy (SEM)
 ---
 

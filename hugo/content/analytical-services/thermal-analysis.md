@@ -1,4 +1,6 @@
 ---
+description: "TMA, DSC and TGA to characterize materials as a function of temperature."
+weight: 9
 title: Thermal Analysis
 ---
 

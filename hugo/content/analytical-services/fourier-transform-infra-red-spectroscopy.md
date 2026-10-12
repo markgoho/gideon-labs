@@ -1,4 +1,6 @@
 ---
+description: "Identification of organic contamination, flux residues, polymers and extractables."
+weight: 4
 title: Fourier Transform Infra-Red
 ---
 

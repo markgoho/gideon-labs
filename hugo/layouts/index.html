@@ -1,24 +1,115 @@
-{{ define "above-content" }}
-{{ partial "hero.html" }}
-{{ end }}
-
 {{ define "main" }}
-<main class="main list">
-	{{- with .Content }}
-	<div class="content main__content clearfix">
-		{{ . }}
-	</div>
-  {{- end }}
+{{- $h := hugo.Data.home -}}
+{{- $o := hugo.Data.organization -}}
+{{- $hidden := site.Params.hiddenCategories -}}
+{{- $stories := where site.RegularPages "Section" "posts" -}}
+<section class="wrap hero" aria-labelledby="hero-title">
+  <p class="eyebrow">{{ $h.eyebrow }}</p>
+  <h1 id="hero-title" class="hero__title">{{ $h.tagline }}</h1>
+  <div class="hero__body">
+    <div class="hero__text">
+      <p class="hero__sub">{{ $h.subheader }}</p>
+      <div class="hero__actions">
+        <a href="/contact/" class="btn">{{ $h.cta }}</a>
+        <a href="/posts/" class="btn btn--ghost">{{ $h.ctaSecondary }}</a>
+      </div>
+      <nav class="hero__tags" aria-label="Story categories">
+        <span class="label">{{ $h.tagsLabel }}</span>
+        <ul class="tags">
+          {{- $shown := 0 }}
+          {{- range site.Taxonomies.categories.ByCount }}
+            {{- if and (lt $shown 10) (not (in $hidden .Page.LinkTitle)) }}
+          <li><a class="tag" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></li>
+              {{- $shown = add $shown 1 }}
+            {{- end }}
+          {{- end }}
+          <li><a class="tag tag--strong" href="/categories/">All {{ len site.Taxonomies.categories }} categories &rarr;</a></li>
+        </ul>
+      </nav>
+    </div>
+    {{- with $h.heroImage }}
+    <figure class="frame frame--cover">
+      <a href="{{ .story }}"><img src="{{ .src }}" alt="{{ .alt }}" width="1200" height="900" fetchpriority="high" decoding="async"></a>
+      <figcaption><span>{{ .caption }}</span><strong>{{ .scale }}</strong></figcaption>
+    </figure>
+    {{- end }}
+  </div>
+</section>
 
-  <h2>Recent Success Stories</h2>
-	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-	{{- range $paginator.Pages }}
-		{{- .Render "summary" }}
-	{{- end }}
-</main>
-<a href="/posts/" class="button">Read more Success Stories</a>
-{{ end }}
+<section class="section section--white" aria-labelledby="cases-title">
+  <div class="wrap cases">
+    <div class="section-head">
+      <div class="section-head__text">
+        <p class="eyebrow">{{ $h.cases.eyebrow }}</p>
+        <h2 id="cases-title">{{ $h.cases.title }}</h2>
+      </div>
+      <a href="/posts/" class="btn btn--ghost">{{ $h.cases.more }} {{ len $stories }}</a>
+    </div>
+    {{- range first 3 $stories }}
+    <article class="case{{ if not .Params.featured_image }} case--no-media{{ end }}">
+      {{- with .Params.featured_image }}
+      <a class="case__media" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ replaceRE `c_scale,w_\d+` "c_scale,w_640" . | safeURL }}" alt="" loading="lazy" decoding="async" width="640" height="480">
+      </a>
+      {{- end }}
+      <div class="case__body">
+        {{- $terms := slice }}
+        {{- range .GetTerms "categories" }}{{ if not (in $hidden .LinkTitle) }}{{ $terms = $terms | append .LinkTitle }}{{ end }}{{ end }}
+        <span class="case__meta">{{ .Date.Format "January 2006" }}{{ range first 2 $terms }} &middot; {{ . }}{{ end }}</span>
+        <h3><a href="{{ .RelPermalink }}" style="view-transition-name: post-{{ .Title | md5 }};">{{ .Title }}</a></h3>
+        <p>{{ .Summary | plainify | htmlUnescape | truncate 260 }}</p>
+        <a class="case__more" href="{{ .RelPermalink }}">Read the case</a>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+</section>
 
-{{ define "below-content" }}
-{{ partial "steps.html" }}
+<section class="section section--dark" aria-labelledby="services-title">
+  <div class="wrap services-band">
+    <div class="services-band__intro">
+      <p class="eyebrow">{{ $h.services.eyebrow }}</p>
+      <h2 id="services-title">{{ $h.services.title }}</h2>
+      <p>{{ $h.services.body }}</p>
+      <img src="{{ $h.services.image }}" alt="{{ $h.services.imageAlt }}" loading="lazy" decoding="async" width="900" height="675">
+      <a href="/analytical-services/" class="btn btn--light">{{ $h.services.more }}</a>
+    </div>
+    <ul class="services-band__list">
+      {{- range (site.GetPage "/analytical-services").Pages.ByWeight }}
+      <li class="tech"><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.description }}<span>{{ . }}</span>{{ end }}</li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="steps-title">
+  <div class="wrap steps">
+    <div class="section-head__text">
+      <p class="eyebrow">{{ $h.stepsTitle }}</p>
+      <h2 id="steps-title">{{ $h.stepsHeading }}</h2>
+    </div>
+    <ol class="steps__list">
+      {{- range $i, $s := $h.steps }}
+      <li class="step">
+        <span class="step__num">STEP {{ add $i 1 }}</span>
+        <h3>{{ $s.title }}</h3>
+        <p>{{ $s.body }}</p>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--accent" aria-labelledby="cta-title">
+  <div class="wrap cta-band">
+    <div>
+      <h2 id="cta-title">{{ $h.ctaBand.title }}</h2>
+      <p>{{ $h.ctaBand.body }}</p>
+    </div>
+    <div class="cta-band__actions">
+      <a href="/contact/" class="btn btn--on-dark">{{ $h.cta }}</a>
+      <a href="tel:{{ $o.telephone }}" class="btn btn--outline-light">Call 845-255-5356</a>
+    </div>
+  </div>
+</section>
 {{ end }}

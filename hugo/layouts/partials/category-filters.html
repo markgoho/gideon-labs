@@ -1,0 +1,25 @@
+{{- /* Top category filters. Context: dict "current" (term page or nil) "count" (total stories) */ -}}
+{{- $hidden := site.Params.hiddenCategories -}}
+{{- $current := .current -}}
+{{- $shown := 0 -}}
+<nav aria-label="Filter by category">
+  <ul class="filters">
+    <li><a class="tag{{ if not $current }} tag--on{{ end }}" href="/posts/"{{ if not $current }} aria-current="page"{{ end }}>All &middot; {{ .count }}</a></li>
+    {{- range site.Taxonomies.categories.ByCount }}
+      {{- if and (lt $shown 8) (not (in $hidden .Page.LinkTitle)) }}
+        {{- $on := and $current (eq $current.RelPermalink .Page.RelPermalink) }}
+    <li><a class="tag{{ if $on }} tag--on{{ end }}" href="{{ .Page.RelPermalink }}"{{ if $on }} aria-current="page"{{ end }}>{{ .Page.LinkTitle }} &middot; {{ .Count }}</a></li>
+        {{- $shown = add $shown 1 }}
+      {{- end }}
+    {{- end }}
+    {{- if and $current (not (in (slice) $current)) }}
+      {{- $inTop := false }}
+      {{- $i := 0 }}
+      {{- range site.Taxonomies.categories.ByCount }}{{ if and (lt $i 8) (not (in $hidden .Page.LinkTitle)) }}{{ if eq .Page.RelPermalink $current.RelPermalink }}{{ $inTop = true }}{{ end }}{{ $i = add $i 1 }}{{ end }}{{ end }}
+      {{- if not $inTop }}
+    <li><a class="tag tag--on" href="{{ $current.RelPermalink }}" aria-current="page">{{ $current.LinkTitle }} &middot; {{ len $current.Pages }}</a></li>
+      {{- end }}
+    {{- end }}
+    <li><a class="tag tag--strong" href="/categories/">All {{ len site.Taxonomies.categories }} categories &rarr;</a></li>
+  </ul>
+</nav>

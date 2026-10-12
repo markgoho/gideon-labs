@@ -1,4 +1,6 @@
 ---
+description: "Nondestructive inspection of solder joints, voids, cracks, delamination and sealed packages."
+weight: 3
 title: X-Ray Radiography
 ---
 

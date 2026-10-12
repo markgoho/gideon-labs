@@ -1,4 +1,6 @@
 ---
+description: "Brightfield, darkfield and polarized light inspection of surfaces and cross-sections."
+weight: 2
 title: Optical Microscopy
 ---
 

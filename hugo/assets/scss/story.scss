@@ -1,0 +1,229 @@
+.story-head {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 32px;
+  padding-bottom: 40px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px 40px;
+    align-items: end;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+  }
+
+  h1 {
+    font-size: clamp(32px, 4.8vw, 58px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+  }
+
+  &__meta {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    font-size: 14px;
+    color: var(--ink-3);
+
+    div {
+      display: flex;
+      gap: 8px;
+    }
+
+    dt {
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: var(--muted-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    color: var(--muted-2);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.story-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+  align-items: flex-start;
+
+  .prose {
+    flex: 999 1 560px;
+    max-width: 760px;
+  }
+}
+
+.rail-col {
+  flex: 1 1 300px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.rail {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--ink-3);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  li a {
+    display: block;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  .btn {
+    margin-top: 8px;
+  }
+
+  &__link {
+    font-weight: 700;
+  }
+}
+
+.story-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 56px;
+  padding-bottom: 80px;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+
+    &:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    &--next {
+      text-align: right;
+      align-items: flex-end;
+    }
+  }
+
+  &__caption {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+}
+
+.related {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+
+  .section-head h2 {
+    font-size: clamp(26px, 3vw, 36px);
+  }
+}
+
+// Generic page (history, specifications, services, contact).
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 48px;
+  padding-bottom: 80px;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 760px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  h1 {
+    font-size: clamp(34px, 4.8vw, 58px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: 19px;
+    color: var(--ink-3);
+  }
+
+  .prose {
+    max-width: 760px;
+  }
+}

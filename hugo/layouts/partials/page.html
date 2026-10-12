@@ -1,0 +1,12 @@
+{{- /* Generic page: history, specifications, components, services, for-sale items, thank-you. */ -}}
+<article class="wrap page">
+  <header class="page__head">
+    {{- if eq .Section "analytical-services" }}<p class="eyebrow"><a href="/analytical-services/">Analytical services</a></p>{{ end }}
+    {{- if eq .Section "for-sale" }}<p class="eyebrow"><a href="/for-sale/">For sale</a></p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.lead | default .Params.description }}<p class="page__lead">{{ . }}</p>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>

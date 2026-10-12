@@ -1,0 +1,29 @@
+{{- $p := .Paginator -}}
+{{- if gt $p.TotalPages 1 }}
+<nav class="pagination" aria-label="Pagination">
+  {{- if $p.HasPrev }}
+  <a class="pagination__item" href="{{ $p.Prev.URL }}" rel="prev">&larr; Newer</a>
+  {{- end }}
+  {{- $cur := $p.PageNumber }}
+  {{- $last := $p.TotalPages }}
+  {{- $prevShown := 0 }}
+  {{- range $p.Pagers }}
+    {{- $n := .PageNumber }}
+    {{- $show := or (le $n 2) (ge $n (sub $last 1)) (and (ge $n (sub $cur 1)) (le $n (add $cur 1))) }}
+    {{- if $show }}
+      {{- if gt (sub $n $prevShown) 1 }}
+  <span class="pagination__item pagination__item--gap" aria-hidden="true">&hellip;</span>
+      {{- end }}
+      {{- if eq $n $cur }}
+  <span class="pagination__item pagination__item--current" aria-current="page">{{ $n }}</span>
+      {{- else }}
+  <a class="pagination__item" href="{{ .URL }}">{{ $n }}</a>
+      {{- end }}
+      {{- $prevShown = $n }}
+    {{- end }}
+  {{- end }}
+  {{- if $p.HasNext }}
+  <a class="pagination__item" href="{{ $p.Next.URL }}" rel="next">Older &rarr;</a>
+  {{- end }}
+</nav>
+{{- end }}

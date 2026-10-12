@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{- $stories := where site.RegularPages "Section" "posts" -}}
+{{- $count := len $stories -}}
+<section class="wrap list-head">
+  <div class="list-head__text">
+    <p class="eyebrow">Success stories and solved problems</p>
+    <h1>{{ $count }} failures, each with a cause.</h1>
+    <p class="list-head__lead">Every case we publish shows the part, the evidence and the conclusion. Filter by what failed to find cases like yours.</p>
+  </div>
+  <form class="search" role="search" data-search="/search.json" onsubmit="return false">
+    <label for="q" class="visually-hidden">Search stories</label>
+    <input id="q" type="search" name="q" placeholder="Search part numbers, components, failure modes" autocomplete="off">
+    <span class="search__status" aria-live="polite" data-search-status></span>
+  </form>
+  {{ partial "category-filters.html" (dict "current" nil "count" $count) }}
+</section>
+<section class="wrap list-body">
+  <ul class="cards" data-search-results hidden></ul>
+  <ul class="cards" data-search-hide>
+    {{- range .Paginator.Pages }}
+    {{ partial "story-card.html" . }}
+    {{- end }}
+  </ul>
+  <div data-search-hide>
+  {{ partial "pagination.html" . }}
+  </div>
+</section>
+{{ end }}

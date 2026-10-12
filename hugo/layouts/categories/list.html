@@ -1,19 +1,22 @@
 {{ define "main" }}
-<h1>
-  {{- if isset .Params "name" }}
-    {{ .Params.name}}
-  {{ else}}
-    {{ .Title }}
-  {{ end -}}
-</h1>
-
-{{ if gt (len .Content) 0 }}
-{{ .Content }}
-{{ end }}
-
-<h2>Success Stories</h2>
-{{ range .Data.Pages }}
-  {{ .Render "summary" }}
-{{ end }}
-
+{{- $count := len (where site.RegularPages "Section" "posts") -}}
+<section class="wrap list-head">
+  <div class="list-head__text">
+    <p class="eyebrow"><a href="/posts/">Success stories</a> &middot; category</p>
+    <h1>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
+    <p class="list-head__lead">{{ len .Pages }} {{ if eq (len .Pages) 1 }}story{{ else }}stories{{ end }} in this category.</p>
+  </div>
+  {{- with .Content }}
+  <div class="prose">{{ . }}</div>
+  {{- end }}
+  {{ partial "category-filters.html" (dict "current" . "count" $count) }}
+</section>
+<section class="wrap list-body">
+  <ul class="cards">
+    {{- range .Paginator.Pages }}
+    {{ partial "story-card.html" . }}
+    {{- end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</section>
 {{ end }}

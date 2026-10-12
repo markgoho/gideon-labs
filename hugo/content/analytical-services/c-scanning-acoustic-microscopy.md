@@ -1,4 +1,6 @@
 ---
+description: "Ultrasonic imaging of delamination, voids and cracks inside packages without opening them."
+weight: 10
 title: C Scanning Acoustic Microscopy
 ---
 

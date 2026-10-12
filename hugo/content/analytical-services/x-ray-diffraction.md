@@ -1,4 +1,6 @@
 ---
+description: "Crystalline phase identification and structural analysis of polycrystalline materials."
+weight: 8
 title: X-Ray Diffraction
 ---
 

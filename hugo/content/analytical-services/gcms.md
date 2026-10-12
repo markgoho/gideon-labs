@@ -1,4 +1,6 @@
 ---
+description: "Separation and identification of volatile and semi-volatile organic compounds."
+weight: 5
 title: Gas chromatography–mass spectrometry
 ---
 

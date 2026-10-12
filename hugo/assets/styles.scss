@@ -1,80 +1,41 @@
 @import './scss/reboot';
 @import './scss/colors';
-@import './scss/mainroad';
 @import './scss/fonts';
-@import './scss/header';
-@import './scss/contact';
+@import './scss/base';
 @import './scss/buttons';
-@import './scss/hero';
+@import './scss/header';
 @import './scss/footer';
-@import './scss/steps';
-@import './scss/categories';
+@import './scss/prose';
+@import './scss/hero';
+@import './scss/home';
+@import './scss/stories';
+@import './scss/story';
+@import './scss/contact';
 
 @view-transition {
   navigation: auto;
 }
 
-body {
-  margin: 0;
-  background-color: #f9f8f6;
-  font-family: FuturaBT, sans-serif;
-  font-weight: 400;
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
 }
 
-html,
-body {
-  text-rendering: optimizeSpeed;
-}
-
-a {
-  background-color: transparent; /* 1 */
-  text-decoration: none;
-  color: inherit;
-}
-
-// table {
-//   display: none;
-// }
-
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap; /* added line */
-}
-
-.sr-clip {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-.banner {
-  padding: 0.5rem;
-  text-align: center;
-  background-color: var(--rgba-primary-4);
-  color: white;
+.site-main {
+  flex: 1 0 auto;
+  min-width: 0;
 }
 
 .related-service {
-  margin: 2rem 0;
-  padding: 1rem 1.25rem;
-  border-left: 4px solid var(--call-to-action);
-  background-color: #fff;
-
-  &__title {
-    margin-top: 0;
+  .btn {
+    margin-top: 8px;
   }
+}
 
-  &__list {
-    margin: 0 0 1rem;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

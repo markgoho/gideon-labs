@@ -1,73 +1,71 @@
-.hero-container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 16px;
-}
-
-.hero-text {
+.hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
+  gap: 32px;
+  padding-top: 56px;
+  padding-bottom: 72px;
 
-.hero-tagline {
-  font-size: 45px;
-  font-weight: 500;
-  letter-spacing: -2px;
-  color: var(--dark-header);
-  line-height: 1.111;
-  margin: 0;
-  padding: 0;
-
-  // @media screen and (max-width: 70rem) {
-  //   font-size: 4rem;
-  //   max-width: unset;
-  // }
-
-  // @media screen and (max-width: 40rem) {
-  //   font-size: 2.8rem;
-  //   letter-spacing: -2px;
-  // }
-}
-
-.sub-header {
-  color: hsl(210, 2%, 44%);
-  text-transform: none;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.333;
-  margin: 1.5em 0;
-}
-
-.hero-image {
-  display: none;
-  width: 275px;
-}
-
-@media screen and (min-width: 769px) {
-  :host {
-    padding: 32px 16px;
+  &__title {
+    font-size: clamp(44px, 8vw, 104px);
+    line-height: 0.96;
+    letter-spacing: -0.035em;
+    max-width: 1100px;
   }
 
-  .hero-container {
-    //   display: grid;
-    // grid-template-columns: 1fr repeat(6, minmax(auto, 240px)) 1fr;
-    // grid-template-rows: min-content;
-    // padding: 3rem 0;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px 48px;
+    align-items: start;
+    border-top: 1px solid var(--ink);
+    padding-top: 32px;
+  }
+
+  &__text {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
   }
 
-  .hero-tagline {
-    max-width: 760px;
-    font-size: 64px;
+  &__sub {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.45;
+    color: var(--ink-3);
+    max-width: 520px;
   }
 
-  .sub-header {
-    max-width: 480px;
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
   }
-  .hero-image {
-    display: block;
+
+  &__tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 8px;
+  }
+}
+
+// Phones: show the first six tags and the "all categories" link.
+@media (max-width: 599px) {
+  .hero__tags .tags li:nth-child(n + 7):not(:last-child) {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    gap: 40px;
+    padding-top: 72px;
+    padding-bottom: 88px;
+  }
+
+  .hero__body {
+    padding-top: 36px;
   }
 }

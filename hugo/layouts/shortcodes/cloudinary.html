@@ -1,12 +1,15 @@
-<figure>
-  <picture>
-    <source srcset="//res.cloudinary.com/dy3wlzuye/image/upload/c_scale,w_300/v1579011424/GideonLabs/{{- .Get "src" -}}.webp" type="image/webp">
-    <img src="//res.cloudinary.com/dy3wlzuye/image/upload/c_scale,w_300/v1579011424/GideonLabs/{{ .Get "src" }}.jpg" {{ if or (.Get "alt") (.Get "caption") }} alt="{{ with .Get "alt" }}{{.}}{{ else }}{{ .Get "caption" }}{{ end }}"
-    {{- end -}} loading="lazy" width="300" height="300" />
-  </picture>
-  {{- if .Get "caption" -}}
-  <figcaption>
-      <h4>{{- .Get "caption" -}}</h4>
-  </figcaption>
-  {{- end -}}
+{{- $base := printf "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_%%d/v1579011424/GideonLabs/%s.jpg" (.Get "src") -}}
+{{- $alt := .Get "alt" | default (.Get "caption") -}}
+<figure class="fig">
+  <img
+    src="{{ printf $base 800 }}"
+    srcset="{{ printf $base 480 }} 480w, {{ printf $base 800 }} 800w, {{ printf $base 1200 }} 1200w"
+    sizes="(min-width: 900px) 740px, calc(100vw - 48px)"
+    alt="{{ $alt }}"
+    loading="lazy"
+    decoding="async"
+  />
+  {{- with .Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
 </figure>

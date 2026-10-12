@@ -1,14 +1,11 @@
 {{ define "main" }}
-<main class="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">{{ .Title }}</h1>
-		</header>
-
-		<div class="content post__content clearfix">
-      {{ .Content }}
-		</div>
-
-	</article>
-</main>
+<article class="wrap page">
+  <header class="page__head">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+    <p><a href="/posts/" class="btn btn--ghost">Read the success stories</a></p>
+  </div>
+</article>
 {{ end }}
