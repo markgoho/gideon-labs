@@ -316,7 +316,7 @@
     font-size: 15px;
     cursor: pointer;
 
-    &:hover {
+    &:not([aria-selected='true']):hover {
       color: #fff;
       border-color: var(--dark-text-3);
     }
@@ -412,7 +412,7 @@
     border-color: transparent;
     padding: 12px 14px;
 
-    &:hover {
+    &:not([aria-selected='true']):hover {
       border-color: transparent;
       background: rgba(255, 255, 255, 0.06);
     }
