@@ -1,4 +1,5 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/diagram9_large.gif"
 description: "Ultrasonic imaging of delamination, voids and cracks inside packages without opening them."
 weight: 10
 title: C Scanning Acoustic Microscopy

@@ -70,19 +70,33 @@
 </section>
 
 <section class="section section--dark" aria-labelledby="services-title">
-  <div class="wrap services-band">
-    <div class="services-band__intro">
+  <div class="wrap services-tabs" data-tabs>
+    <div class="services-tabs__intro">
       <p class="eyebrow">{{ $h.services.eyebrow }}</p>
       <h2 id="services-title">{{ $h.services.title }}</h2>
       <p>{{ $h.services.body }}</p>
-      <img src="{{ $h.services.image }}" alt="{{ $h.services.imageAlt }}" loading="lazy" decoding="async" width="900" height="675">
-      <a href="/analytical-services/" class="btn btn--light">{{ $h.services.more }}</a>
     </div>
-    <ul class="services-band__list">
-      {{- range (site.GetPage "/analytical-services").Pages.ByWeight }}
-      <li class="tech"><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.description }}<span>{{ . }}</span>{{ end }}</li>
+    {{- $services := (site.GetPage "/analytical-services").Pages.ByWeight }}
+    <ul class="services-tabs__list" role="tablist" aria-label="Analytical services">
+      {{- range $i, $p := $services }}
+      <li role="presentation"><button class="services-tabs__tab" role="tab" type="button" id="service-tab-{{ $i }}" aria-controls="service-panel-{{ $i }}" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}" tabindex="{{ if eq $i 0 }}0{{ else }}-1{{ end }}">{{ $p.Title }}</button></li>
       {{- end }}
     </ul>
+    <div class="services-tabs__panels">
+      {{- range $i, $p := $services }}
+      <section class="services-tabs__panel" role="tabpanel" id="service-panel-{{ $i }}" aria-labelledby="service-tab-{{ $i }}" tabindex="0"{{ if ne $i 0 }} hidden{{ end }}>
+        {{- with $p.Params.image }}
+        <img src="{{ replaceRE `c_scale,w_\d+` "c_scale,w_900" . | safeURL }}" alt="" width="900" height="675" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}" decoding="async">
+        {{- end }}
+        <div class="services-tabs__body">
+          <h3>{{ $p.Title }}</h3>
+          <p>{{ $p.Params.description }}</p>
+          <a href="{{ $p.RelPermalink }}" class="btn btn--light btn--small">Read about {{ $p.Title }}</a>
+        </div>
+      </section>
+      {{- end }}
+    </div>
+    <a href="/analytical-services/" class="btn btn--outline-light services-tabs__all">{{ $h.services.more }}</a>
   </div>
 </section>
 

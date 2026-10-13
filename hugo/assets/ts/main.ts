@@ -81,3 +81,39 @@ if (searchForm) {
     if (input.value) render(input.value);
   }
 }
+
+// Tabbed viewers (analytical services on the home page).
+document.querySelectorAll<HTMLElement>('[data-tabs]').forEach((root) => {
+  const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+  const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls') || ''));
+  if (!tabs.length) return;
+
+  const select = (index: number, focus = false) => {
+    tabs.forEach((tab, i) => {
+      const on = i === index;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      const panel = panels[i];
+      if (panel) panel.hidden = !on;
+    });
+    if (focus) tabs[index].focus();
+  };
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => select(i));
+    tab.addEventListener('keydown', (event) => {
+      const keys: Record<string, number> = {
+        ArrowDown: i + 1,
+        ArrowRight: i + 1,
+        ArrowUp: i - 1,
+        ArrowLeft: i - 1,
+        Home: 0,
+        End: tabs.length - 1,
+      };
+      const next = keys[event.key];
+      if (next === undefined) return;
+      event.preventDefault();
+      select((next + tabs.length) % tabs.length, true);
+    });
+  });
+});

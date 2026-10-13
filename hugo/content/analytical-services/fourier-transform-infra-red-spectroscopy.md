@@ -1,4 +1,5 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/FTIR-1.jpg"
 description: "Identification of organic contamination, flux residues, polymers and extractables."
 weight: 4
 title: Fourier Transform Infra-Red

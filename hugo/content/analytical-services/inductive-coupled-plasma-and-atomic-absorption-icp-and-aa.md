@@ -1,4 +1,5 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/aa-55.jpg"
 description: "Trace metal and ionic analysis down to picogram quantities."
 weight: 6
 title: Inductive Coupled Plasma and Atomic Absorption

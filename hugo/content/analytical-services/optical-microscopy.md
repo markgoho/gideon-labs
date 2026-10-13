@@ -1,4 +1,5 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/optica1.jpg"
 description: "Brightfield, darkfield and polarized light inspection of surfaces and cross-sections."
 weight: 2
 title: Optical Microscopy
