@@ -4,35 +4,39 @@
 {{- $hidden := site.Params.hiddenCategories -}}
 {{- $stories := where site.RegularPages "Section" "posts" -}}
 <section class="wrap hero" aria-labelledby="hero-title">
-  <p class="eyebrow">{{ $h.eyebrow }}</p>
-  <h1 id="hero-title" class="hero__title">{{ $h.tagline }}</h1>
-  <div class="hero__body">
-    <div class="hero__text">
-      <p class="hero__sub">{{ $h.subheader }}</p>
-      <div class="hero__actions">
-        <a href="/contact/" class="btn">{{ $h.cta }}</a>
-        <a href="/posts/" class="btn btn--ghost">{{ $h.ctaSecondary }}</a>
-      </div>
-      <nav class="hero__tags" aria-label="Story categories">
-        <span class="label">{{ $h.tagsLabel }}</span>
-        <ul class="tags">
-          {{- $shown := 0 }}
-          {{- range site.Taxonomies.categories.ByCount }}
-            {{- if and (lt $shown 10) (not (in $hidden .Page.LinkTitle)) }}
-          <li><a class="tag" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></li>
-              {{- $shown = add $shown 1 }}
-            {{- end }}
-          {{- end }}
-          <li><a class="tag tag--strong" href="/categories/">All {{ len site.Taxonomies.categories }} categories &rarr;</a></li>
-        </ul>
-      </nav>
+  <div class="hero__text">
+    <p class="eyebrow">{{ $h.eyebrow }}</p>
+    <h1 id="hero-title" class="hero__title">{{ $h.tagline }}</h1>
+    <p class="hero__sub">{{ $h.subheader }}</p>
+    <div class="hero__actions">
+      <a href="/contact/" class="btn">{{ $h.cta }}</a>
+      <a href="/posts/" class="btn btn--ghost">{{ $h.ctaSecondary }}</a>
     </div>
-    {{- with $h.heroImage }}
-    <figure class="frame frame--cover">
-      <a href="{{ .story }}"><img src="{{ .src }}" alt="{{ .alt }}" width="1200" height="900" fetchpriority="high" decoding="async"></a>
-      <figcaption><span>{{ .caption }}</span><strong>{{ .scale }}</strong></figcaption>
-    </figure>
-    {{- end }}
+  </div>
+  {{- with $h.heroImage }}
+  <figure class="frame frame--cover hero__media">
+    <a href="{{ .story }}"><img src="{{ .src }}" alt="{{ .alt }}" width="1200" height="900" fetchpriority="high" decoding="async"></a>
+    <figcaption><span>{{ .caption }}</span><strong>{{ .scale }}</strong></figcaption>
+  </figure>
+  {{- end }}
+</section>
+
+<section class="section--white hero-tags" aria-labelledby="tags-title">
+  <div class="wrap hero-tags__grid">
+    <div class="hero-tags__text">
+      <h2 id="tags-title" class="label">{{ $h.tagsLabel }}</h2>
+      <p>The most common failure types in our files. The full index lists all {{ len site.Taxonomies.categories }} categories.</p>
+    </div>
+    <ul class="tags">
+      {{- $shown := 0 }}
+      {{- range site.Taxonomies.categories.ByCount }}
+        {{- if and (lt $shown 10) (not (in $hidden .Page.LinkTitle)) }}
+      <li><a class="tag" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></li>
+          {{- $shown = add $shown 1 }}
+        {{- end }}
+      {{- end }}
+      <li><a class="tag tag--strong" href="/categories/">All {{ len site.Taxonomies.categories }} categories &rarr;</a></li>
+    </ul>
   </div>
 </section>
 
