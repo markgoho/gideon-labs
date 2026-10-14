@@ -1,7 +1,6 @@
 .btn,
 .button,
-.submit,
-.call-to-action {
+.submit {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -43,19 +42,10 @@
   }
 }
 
+// White button for dark and burgundy bands.
 .btn--light {
-  background: #fff;
+  background: var(--surface);
   color: var(--ink);
-
-  &:hover {
-    background: var(--color-primary-tint);
-    color: var(--color-primary-dark);
-  }
-}
-
-.btn--on-dark {
-  background: #fff;
-  color: var(--color-primary-dark);
 
   &:hover {
     background: var(--color-primary-tint);
@@ -78,10 +68,6 @@
   min-height: 44px;
   padding: 0 20px;
   font-size: 16px;
-}
-
-.btn--block {
-  width: 100%;
 }
 
 .btn:disabled,

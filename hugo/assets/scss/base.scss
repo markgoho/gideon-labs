@@ -47,6 +47,32 @@ h4 {
   padding-right: var(--gutter);
 }
 
+// Keyboard focus for text links and controls. Buttons and tabs set their own.
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+// Page heads: one title scale for the stories index, a story, categories and generic pages.
+.list-head h1,
+.story-head h1,
+.page h1 {
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+
+// Lead paragraph under a page title.
+.lead {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
 .eyebrow {
   margin: 0;
   font-size: 13px;

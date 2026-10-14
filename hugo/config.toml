@@ -12,7 +12,7 @@ description = "We solve problems for the electronic industry using failure analy
 hiddenCategories = ["Failure Analysis", "Success Stories", "Analytical Services"]
 [[menu.main]]
 name = "Success Stories"
-url = "/posts/"
+pageRef = "/posts"
 weight = 2
 [taxonomies]
 category = "categories"

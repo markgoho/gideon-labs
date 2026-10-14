@@ -10,7 +10,7 @@
     flex-direction: column;
     gap: 20px;
     font-size: 17px;
-    color: var(--ink-2);
+    color: var(--ink-3);
 
     p {
       margin: 0;
@@ -46,7 +46,7 @@
     padding: 12px 14px;
     border-radius: var(--radius-s);
     border: 1px solid var(--line-2);
-    background: #fff;
+    background: var(--surface);
     font: inherit;
     font-weight: 400;
     color: var(--ink);

@@ -62,7 +62,7 @@
         <span class="case__meta">{{ .Date.Format "January 2006" }}{{ range first 2 $terms }} &middot; {{ . }}{{ end }}</span>
         <h3><a href="{{ .RelPermalink }}" style="view-transition-name: post-{{ .Title | md5 }};">{{ .Title }}</a></h3>
         <p>{{ .Summary | plainify | htmlUnescape | truncate 260 }}</p>
-        <a class="case__more" href="{{ .RelPermalink }}">Read the case</a>
+        <a class="case__more" href="{{ .RelPermalink }}">Read the case &rarr;</a>
       </div>
     </article>
     {{- end }}
@@ -125,7 +125,7 @@
       <p>{{ $h.ctaBand.body }}</p>
     </div>
     <div class="cta-band__actions">
-      <a href="/contact/" class="btn btn--on-dark">{{ $h.cta }}</a>
+      <a href="/contact/" class="btn btn--light">{{ $h.cta }}</a>
       <a href="tel:{{ $o.telephone }}" class="btn btn--outline-light">Call 845-255-5356</a>
     </div>
   </div>

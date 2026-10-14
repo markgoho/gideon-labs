@@ -10,7 +10,10 @@
         {{- $currentNode := . }}
         {{- range sort .Site.Menus.main }}
         {{- if .Name }}
-        <li class="menu__item{{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} menu__item--active{{ end }}">
+        {{- /* Category pages belong to Success Stories but are not children of /posts/. */}}
+        {{- $isStories := and (eq .URL "/posts/") (in (slice "taxonomy" "term") $currentNode.Kind) }}
+        {{- $active := or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) $isStories }}
+        <li class="menu__item{{ if $active }} menu__item--active{{ end }}">
           <a class="menu__link" href="{{ .URL }}"{{ if $currentNode.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
         </li>
         {{- end }}

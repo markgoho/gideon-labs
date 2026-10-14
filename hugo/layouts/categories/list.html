@@ -4,7 +4,7 @@
   <div class="list-head__text">
     <p class="eyebrow"><a href="/posts/">Success stories</a> &middot; category</p>
     <h1>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
-    <p class="list-head__lead">{{ len .Pages }} {{ if eq (len .Pages) 1 }}story{{ else }}stories{{ end }} in this category.</p>
+    <p class="lead">{{ len .Pages }} {{ if eq (len .Pages) 1 }}story{{ else }}stories{{ end }} in this category.</p>
   </div>
   {{- with .Content }}
   <div class="prose">{{ . }}</div>

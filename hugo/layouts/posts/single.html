@@ -20,7 +20,7 @@
         </ul>
         {{- end }}
         <h1 style="view-transition-name: post-{{ .Title | md5 }};">{{ .Title }}</h1>
-        {{- with .Params.lead }}<p class="list-head__lead">{{ . }}</p>{{ end }}
+        {{- with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
         <dl class="story-head__meta">
           <div><dt>Date</dt><dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></dd></div>
           <div><dt>Lab</dt><dd>{{ hugo.Data.organization.name }}, Highland, NY</dd></div>

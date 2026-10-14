@@ -69,15 +69,18 @@
   color: var(--ink);
   font-size: 17px;
   text-decoration: none;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
 
   &:hover {
     color: var(--color-primary);
   }
 }
 
+// The active state must not change the font weight: a wider word would move the whole menu row.
 .menu__item--active .menu__link {
-  font-weight: 700;
   color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .site-header__cta {

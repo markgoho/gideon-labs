@@ -1,7 +1,9 @@
 {{ define "main" }}
 <section class="wrap list-head">
   <div class="list-head__text">
+    {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
     <h1>{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
   </div>
   {{- with .Content }}
   <div class="prose">{{ . }}</div>
