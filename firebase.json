@@ -17,6 +17,15 @@
       ],
       "headers": [
         {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        },
+        {
           "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font|css)",
           "headers": [
             {
@@ -119,6 +128,15 @@
         "**/node_modules/**"
       ],
       "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        },
         {
           "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font)",
           "headers": [
