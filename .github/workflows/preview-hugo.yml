@@ -36,4 +36,4 @@ jobs:
           projectId: gideonlabs-b4b71
           target: production
           channelId: pr-${{ github.event.pull_request.number }}
-          expires: 1d
+          expires: 7d
