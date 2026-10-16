@@ -1,23 +1,75 @@
 {{ define "main" }}
-<main class="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title" style="view-transition-name: post-{{ .Title | md5 }};">
-        {{ .Title }}
-      </h1>
-			{{- with .Params.lead }}
-			<p class="post__lead">{{ . }}</p>
-			{{- end }}
-			{{ with partial "post_meta.html" . -}}
-			<div class="post__meta meta">{{ . }}</div>
-			{{- end }}
-		</header>
-		{{- partial "post_toc.html" . -}}
-		<div class="content post__content clearfix">
-			{{ .Content }}
+{{- $hidden := site.Params.hiddenCategories -}}
+{{- $terms := slice -}}
+{{- range .GetTerms "categories" }}{{ if not (in $hidden .LinkTitle) }}{{ $terms = $terms | append . }}{{ end }}{{ end -}}
+{{- $primary := "" -}}
+{{- with $terms }}{{ $primary = index . 0 }}{{ end -}}
+{{- $cover := .Params.featured_image -}}
+{{- if and $cover (strings.Contains .RawContent (path.Base $cover)) }}{{ $cover = "" }}{{ end -}}
+<article>
+  <header class="wrap story-head">
+    <ol class="breadcrumb" aria-label="Breadcrumb">
+      <li><a href="/posts/">Success stories</a></li>
+      {{- with $primary }}<li aria-hidden="true">/</li><li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+    </ol>
+    <div class="story-head__grid">
+      <div class="story-head__text">
+        {{- with $terms }}
+        <ul class="chips">
+          {{- range . }}<li><a class="chip" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+        </ul>
+        {{- end }}
+        <h1 style="view-transition-name: post-{{ .Title | md5 }};">{{ .Title }}</h1>
+        {{- with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+        <dl class="story-head__meta">
+          <div><dt>Date</dt><dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></dd></div>
+          <div><dt>Lab</dt><dd>{{ hugo.Data.organization.name }}, Highland, NY</dd></div>
+        </dl>
+      </div>
+      {{- with $cover }}
+      <figure class="frame frame--cover">
+        <img src="{{ replaceRE `c_scale,w_\d+` "c_scale,w_1200" . | safeURL }}" alt="" width="1200" height="900" fetchpriority="high" decoding="async">
+      </figure>
+      {{- end }}
     </div>
-    {{ partial "related-service.html" . }}
-	</article>
-</main>
-{{ partial "post_nav.html" . }}
+  </header>
+
+  <div class="section--white">
+    <div class="wrap story-body">
+      <div class="prose prose--lead">
+        {{ .Content }}
+      </div>
+      <aside class="rail-col" aria-label="Related">
+        {{ partial "related-service.html" . }}
+        {{- with $primary }}
+        <div class="rail">
+          <p class="eyebrow">Have a similar failure?</p>
+          <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}story{{ else }}stories{{ end }} in our files are filed under {{ .LinkTitle }}.</p>
+          <a class="rail__link" href="{{ .RelPermalink }}">Browse {{ .LinkTitle }} stories &rarr;</a>
+        </div>
+        {{- end }}
+      </aside>
+    </div>
+  </div>
+
+  <footer class="wrap story-foot">
+    {{ partial "post_nav.html" . }}
+    {{- with $primary }}
+      {{- $related := first 3 (where .Pages "Permalink" "ne" $.Permalink) }}
+      {{- with $related }}
+    <section class="related" aria-labelledby="related-title">
+      <div class="section-head">
+        <h2 id="related-title">More {{ $primary.LinkTitle }}</h2>
+        <a href="{{ $primary.RelPermalink }}" class="btn btn--ghost btn--small">All {{ $primary.LinkTitle }} stories</a>
+      </div>
+      <ul class="cards">
+        {{- range . }}
+        {{ partial "story-card.html" . }}
+        {{- end }}
+      </ul>
+    </section>
+      {{- end }}
+    {{- end }}
+  </footer>
+</article>
 {{ end }}

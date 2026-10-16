@@ -1,4 +1,6 @@
 ---
+description: "Nondestructive elemental analysis of solids, powders and liquids, including plating and alloys."
+weight: 7
 title: X-Ray Fluorescence Spectrometry (XRF)
 ---
 

@@ -1,4 +1,7 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/tg209.jpg"
+description: "TMA, DSC and TGA to characterize materials as a function of temperature."
+weight: 9
 title: Thermal Analysis
 ---
 

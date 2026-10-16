@@ -1,0 +1,25 @@
+name: PR preview cleanup
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  delete-channel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete the preview channel
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          CHANNEL: pr-${{ github.event.pull_request.number }}
+        run: |
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/sa.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/sa.json"
+          # The channel does not exist for PRs that never touched hugo/, so a miss is not a failure.
+          npx --yes firebase-tools@latest hosting:channel:delete "$CHANNEL" \
+            --project gideonlabs-b4b71 --site gideonlabs-b4b71 --force \
+            || echo "No preview channel named $CHANNEL."
+          rm -f "$RUNNER_TEMP/sa.json"

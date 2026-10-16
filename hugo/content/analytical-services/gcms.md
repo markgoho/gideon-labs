@@ -1,4 +1,7 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/GCMS-TIC-1.jpg"
+description: "Separation and identification of volatile and semi-volatile organic compounds."
+weight: 5
 title: Gas chromatography–mass spectrometry
 ---
 

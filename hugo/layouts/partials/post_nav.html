@@ -1,0 +1,22 @@
+{{- /* Older and newer story. Section pages are sorted newest first, so Next is newer. */ -}}
+{{- if or .PrevInSection .NextInSection }}
+<nav class="post-nav" aria-label="Older and newer stories">
+  {{- with .PrevInSection }}
+  <a class="post-nav__link" href="{{ .RelPermalink }}" rel="prev">
+    <span class="post-nav__caption">&larr; Older story</span>
+    <span class="post-nav__title">{{ .Title }}</span>
+  </a>
+  {{- end }}
+  {{- with .NextInSection }}
+  <a class="post-nav__link post-nav__link--next" href="{{ .RelPermalink }}" rel="next">
+    <span class="post-nav__caption">Newer story &rarr;</span>
+    <span class="post-nav__title">{{ .Title }}</span>
+  </a>
+  {{- else }}
+  <a class="post-nav__link post-nav__link--next" href="/posts/">
+    <span class="post-nav__caption">Newest story</span>
+    <span class="post-nav__title">You are reading it. Back to all {{ len (where site.RegularPages "Section" "posts") }} stories &rarr;</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}

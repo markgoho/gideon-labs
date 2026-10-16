@@ -1,4 +1,7 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/IMG_20180131_114409.jpg"
+description: "Crystalline phase identification and structural analysis of polycrystalline materials."
+weight: 8
 title: X-Ray Diffraction
 ---
 

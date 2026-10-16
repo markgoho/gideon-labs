@@ -1,8 +1,16 @@
 {{ define "main" }}
-  <h1>Success Story Categories</h1>
-  <ul>
-  {{ range .Data.Pages }}
-    {{ partial "category-summary" . }}
-  {{ end }}
+<section class="wrap list-head">
+  <div class="list-head__text">
+    <p class="eyebrow"><a href="/posts/">Success stories</a></p>
+    <h1>Success story categories</h1>
+    <p class="lead">{{ len .Pages }} categories across {{ len (where site.RegularPages "Section" "posts") }} stories. Pick what failed.</p>
+  </div>
+</section>
+<section class="wrap list-body">
+  <ul class="term-list">
+    {{- range .Pages.ByTitle }}
+    <li><a class="term" href="{{ .RelPermalink }}"><span>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</span><span class="term__count">{{ len .Pages }}</span></a></li>
+    {{- end }}
   </ul>
+</section>
 {{ end }}

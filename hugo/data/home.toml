@@ -1,9 +1,45 @@
-tagline = "We Solve Problems for the Electronic Industry"
-subheader = "Failure analysis, electrical testing, process evaluation and testing to many specifications."
-cta = "Start solving"
-stepsTitle = "How It Works"
-steps = [
-  "Provide Gideon Labs with information about your failure",
-  "We use a variety of industry techniques to diagnose the failure",
-  "You get a comprehensive report of why the failure occurred",
-]
+eyebrow = "Electronic failure analysis · Highland, NY · since 1988"
+tagline = "We find out why your electronics failed."
+subheader = "Failure analysis, electrical testing, process evaluation and testing to industry specifications. You send the failed part. You get a report that names the cause."
+cta = "Request a failure analysis"
+ctaSecondary = "Read the success stories"
+tagsLabel = "What failed? Find cases like yours"
+
+[heroImage]
+src = "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_1200/GideonLabs/Figure_10.jpg"
+alt = "Optical micrograph of corroded surface-mount resistors at 50 times magnification"
+caption = "Browning BTC-7-4K-Edge · corrosion across resistor terminals"
+scale = "×50.0"
+story = "/posts/browning-trail-camera-recon-force-failures/"
+
+[cases]
+eyebrow = "Recent success stories"
+title = "Case files"
+more = "Browse all"
+
+[services]
+eyebrow = "Analytical services"
+title = "The instruments behind the answer."
+body = "Each technique answers a different question. We choose the set that fits the failure, not the other way round."
+image = "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_900/GideonLabs/Hitachi4500.jpg"
+imageAlt = "Hitachi S-4500 scanning electron microscope"
+more = "All analytical services"
+
+stepsTitle = "How it works"
+stepsHeading = "Three steps from failed part to answer."
+
+[[steps]]
+title = "Tell us about the failure"
+body = "Part numbers, how it was used, how it failed, and how many. Ship the parts to Highland, NY."
+
+[[steps]]
+title = "We diagnose it"
+body = "Electrical characterization first. Then radiography, cross-sections, SEM, FTIR or whatever the evidence calls for."
+
+[[steps]]
+title = "You get the report"
+body = "Micrographs, data and a plain conclusion: design, process, application, materials or wear-out."
+
+[ctaBand]
+title = "Have a failure on your bench?"
+body = "Send a short description and we reply with a plan and a quote."

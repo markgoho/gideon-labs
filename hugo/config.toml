@@ -4,19 +4,16 @@ locale = "en-us"
 publishDir = "../public"
 theme = "mainroad"
 title = "Gideon Labs"
+[pagination]
+pagerSize = 12
 [Params]
 description = "We solve problems for the electronic industry using failure analysis, electrical testing, process evaluation and testing to many specifications."
-post_meta = ["date", "categories"]
-post_navigation = true
-readmore = false
-[Params.sidebar]
-home = "right"
-list = "right"
-single = "right"
-widgets = ["recent", "categories"]
-[Params.widgets]
-recent_num = 5
-tags_counter = false
+# Generic terms that are not useful as filters or chips.
+hiddenCategories = ["Failure Analysis", "Success Stories", "Analytical Services"]
+[[menu.main]]
+name = "Success Stories"
+pageRef = "/posts"
+weight = 2
 [taxonomies]
 category = "categories"
 [mediaTypes."text/markdown"]
@@ -25,6 +22,11 @@ suffixes = ["md"]
 mediaType = "text/markdown"
 baseName = "index"
 isPlainText = true
+[outputFormats.search]
+mediaType = "application/json"
+baseName = "search"
+isPlainText = true
+notAlternative = true
 [outputFormats.llms]
 mediaType = "text/plain"
 baseName = "llms"
@@ -43,7 +45,7 @@ path = ".well-known/agent-skills"
 isPlainText = true
 notAlternative = true
 [outputs]
-home = ["HTML", "RSS", "markdown", "llms", "agentskill", "agentskills"]
+home = ["HTML", "RSS", "markdown", "llms", "agentskill", "agentskills", "search"]
 page = ["HTML", "markdown"]
 section = ["HTML", "RSS", "markdown"]
 taxonomy = ["HTML", "RSS", "markdown"]

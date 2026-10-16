@@ -1,0 +1,23 @@
+{{- /* One success story card. Context: a post page. */ -}}
+{{- $hidden := site.Params.hiddenCategories -}}
+<li class="card" data-title="{{ .Title | lower }}">
+  {{- with .Params.featured_image }}
+  <a class="card__media" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ replaceRE `c_scale,w_\d+` "c_scale,w_640" . | safeURL }}" alt="" loading="lazy" decoding="async" width="640" height="400">
+  </a>
+  {{- end }}
+  <div class="card__body">
+    {{- $terms := slice }}
+    {{- range .GetTerms "categories" }}{{ if not (in $hidden .LinkTitle) }}{{ $terms = $terms | append . }}{{ end }}{{ end }}
+    {{- with $terms }}
+    <ul class="chips">
+      {{- range first 2 . }}
+      <li><a class="chip" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    <h2><a href="{{ .RelPermalink }}" style="view-transition-name: post-{{ .Title | md5 }};">{{ .Title }}</a></h2>
+    <p>{{ .Summary | plainify | htmlUnescape | truncate 140 }}</p>
+    <span class="card__date">{{ .Date.Format "January 2, 2006" }}</span>
+  </div>
+</li>
