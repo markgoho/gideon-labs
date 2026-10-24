@@ -817,6 +817,16 @@
           "source": "/analytical-services/c-scanning-acoustic-microscopy",
           "destination": "/analytical-services/",
           "type": 301
+        },
+        {
+          "source": "/page/:n/",
+          "destination": "/posts/page/:n/",
+          "type": 301
+        },
+        {
+          "source": "/page/:n",
+          "destination": "/posts/page/:n/",
+          "type": 301
         }
       ]
     },

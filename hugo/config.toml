@@ -7,7 +7,7 @@ title = "Gideon Labs"
 [pagination]
 pagerSize = 12
 [Params]
-description = "We solve problems for the electronic industry using failure analysis, electrical testing, process evaluation and testing to many specifications."
+description = "Independent electronic failure analysis laboratory in Highland, New York. We find out why your electronics failed, with SEM, FTIR, XRF, radiography, XRD and thermal analysis."
 # Generic terms that are not useful as filters or chips.
 hiddenCategories = ["Failure Analysis", "Success Stories", "Analytical Services"]
 [[menu.main]]
