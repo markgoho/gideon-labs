@@ -1,6 +1,7 @@
 ---
 description: "Nondestructive elemental analysis of solids, powders and liquids, including plating and alloys."
 weight: 7
+image: https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_800/GideonLabs/Sample-2-XRF-showing-chlorine.jpg
 title: X-Ray Fluorescence Spectrometry (XRF)
 ---
 
