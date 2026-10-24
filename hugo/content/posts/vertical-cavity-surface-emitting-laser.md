@@ -6,7 +6,7 @@ categories:
   - 'Contamination Analysis'
   - 'Diode Failure Analysis'
   - 'Failure Analysis'
-  - 'IC Failure Analysis (Integrated Circuit"'
+  - IC Failure Analysis (Integrated Circuit)
   - 'Laser Failures'
   - 'Success Stories'
 ---
