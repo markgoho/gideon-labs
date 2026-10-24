@@ -11,6 +11,9 @@ jobs:
   delete-channel:
     runs-on: ubuntu-latest
     steps:
+      # The CLI refuses to run outside a directory with firebase.json.
+      - uses: actions/checkout@v5
+
       - name: Delete the preview channel
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
@@ -18,8 +21,17 @@ jobs:
         run: |
           printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/sa.json"
           export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/sa.json"
-          # The channel does not exist for PRs that never touched hugo/, so a miss is not a failure.
+          set +e
           npx --yes firebase-tools@latest hosting:channel:delete "$CHANNEL" \
-            --project gideonlabs-b4b71 --site gideonlabs-b4b71 --force \
-            || echo "No preview channel named $CHANNEL."
+            --project gideonlabs-b4b71 --site gideonlabs-b4b71 --force 2>&1 | tee "$RUNNER_TEMP/delete.log"
+          status=${PIPESTATUS[0]}
           rm -f "$RUNNER_TEMP/sa.json"
+          if [ "$status" -ne 0 ]; then
+            # The channel does not exist for PRs that never touched hugo/, so a miss is not a failure.
+            if grep -qi "not found\|does not exist\|no channel" "$RUNNER_TEMP/delete.log"; then
+              echo "No preview channel named $CHANNEL."
+              exit 0
+            fi
+            echo "Could not delete the preview channel $CHANNEL."
+            exit "$status"
+          fi
