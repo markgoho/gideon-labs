@@ -2,7 +2,7 @@
 title: Analytical Services
 pageTitle: List of Analytical Services Offered
 eyebrow: What we do
-lead: Ten techniques, one lab. Pick a service to see what it shows and when we use it.
+lead: Six techniques, one lab. Pick a service to see what it shows and when we use it.
 menu:
   main:
     weight: 1

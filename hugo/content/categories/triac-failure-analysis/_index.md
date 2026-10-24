@@ -10,6 +10,6 @@ Triacs are used to switch AC loads, for example in light dimmers, motor speed co
 
 The case studies in this category include power triacs with an abnormal curve trace and a fractured die. They also include an optocoupler with an internal leakage path that went away after a bake.
 
-The lab begins with curve tracing to see how the part fails. We then decapsulate it and inspect the die with [optical microscopy](/analytical-services/optical-microscopy/). [Scanning electron microscopy](/analytical-services/scanning-electron-microscopy/) and [X-ray radiography](/analytical-services/x-ray-radiography/) help to find cracks and contamination.
+The lab begins with curve tracing to see how the part fails. We then decapsulate it and inspect the die with optical microscopy. [Scanning electron microscopy](/analytical-services/scanning-electron-microscopy/) and [X-ray radiography](/analytical-services/x-ray-radiography/) help to find cracks and contamination.
 
 If you have failed triacs, [request a quote](/contact/).
