@@ -1,4 +1,7 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/Hitachi4500.jpg"
+description: "Surface topography to 250,000×, EDS elemental analysis and EBIC imaging of components, boards and materials."
+weight: 1
 title: Scanning Electron Microscopy (SEM)
 ---
 

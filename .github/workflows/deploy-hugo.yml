@@ -5,6 +5,7 @@ on:
     paths:
       - 'hugo/**'
       - '.github/workflows/deploy-hugo.yml'
+      - 'firebase.json'
     branches:
       - master
 

@@ -1,4 +1,4 @@
-{{ $img := "/img/microscope.png" | absURL }}
+{{ $img := hugo.Data.home.heroImage.src }}
 {{ if .Params.featured_image }}
   {{ $img = .Params.featured_image | absURL }}
 {{ else if .Params.thumbnail }}

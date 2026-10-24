@@ -1,73 +1,93 @@
-.hero-container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 16px;
-}
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px 56px;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 64px;
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.hero-tagline {
-  font-size: 45px;
-  font-weight: 500;
-  letter-spacing: -2px;
-  color: var(--dark-header);
-  line-height: 1.111;
-  margin: 0;
-  padding: 0;
-
-  // @media screen and (max-width: 70rem) {
-  //   font-size: 4rem;
-  //   max-width: unset;
-  // }
-
-  // @media screen and (max-width: 40rem) {
-  //   font-size: 2.8rem;
-  //   letter-spacing: -2px;
-  // }
-}
-
-.sub-header {
-  color: hsl(210, 2%, 44%);
-  text-transform: none;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.333;
-  margin: 1.5em 0;
-}
-
-.hero-image {
-  display: none;
-  width: 275px;
-}
-
-@media screen and (min-width: 769px) {
-  :host {
-    padding: 32px 16px;
-  }
-
-  .hero-container {
-    //   display: grid;
-    // grid-template-columns: 1fr repeat(6, minmax(auto, 240px)) 1fr;
-    // grid-template-rows: min-content;
-    // padding: 3rem 0;
+  &__text {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
   }
 
-  .hero-tagline {
-    max-width: 760px;
-    font-size: 64px;
+  &__title {
+    font-size: clamp(40px, 5.6vw, 76px);
+    line-height: 1;
+    letter-spacing: -0.03em;
   }
 
-  .sub-header {
-    max-width: 480px;
+  &__sub {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink-3);
+    max-width: 520px;
   }
-  .hero-image {
-    display: block;
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  &__media {
+    align-self: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+    padding-top: 72px;
+    padding-bottom: 88px;
+  }
+}
+
+// Category tags strip under the hero.
+.hero-tags {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px 48px;
+    align-items: start;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 340px;
+
+    p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--ink-3);
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-tags {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .hero-tags__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+// Phones: show the first six tags and the "all categories" link.
+@media (max-width: 599px) {
+  .hero-tags .tags li:nth-child(n + 7):not(:last-child) {
+    display: none;
   }
 }

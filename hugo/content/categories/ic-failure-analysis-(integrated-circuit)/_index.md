@@ -10,6 +10,6 @@ ICs fail for many reasons. Electrical overstress (EOS) and electrostatic dischar
 
 The case studies in this category cover logic ICs, a DSP, gate drivers, voltage regulators and optocouplers. They include a CMOS gate with its supply line pulled down, and optocouplers with internal contamination.
 
-The lab starts with electrical tests and curve tracing, then uses [X-ray radiography](/analytical-services/x-ray-radiography/) and [C-scanning acoustic microscopy](/analytical-services/c-scanning-acoustic-microscopy/) to look at the package without damage. Next we decapsulate the part and examine the die with [optical microscopy](/analytical-services/optical-microscopy/) and [scanning electron microscopy](/analytical-services/scanning-electron-microscopy/).
+The lab starts with electrical tests and curve tracing, then uses [X-ray radiography](/analytical-services/x-ray-radiography/) to look at the package without damage. Next we decapsulate the part and examine the die with optical microscopy and [scanning electron microscopy](/analytical-services/scanning-electron-microscopy/).
 
 If you have failed ICs, [request a quote](/contact/).

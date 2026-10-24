@@ -10,6 +10,6 @@ PCB problems can come from the bare board or from assembly. Common failure modes
 
 The case studies in this category include a board with an open plated through hole and a board with a short caused by tin whisker growth in the solder mask. Others show BGA voiding, and flex damage to ceramic capacitors.
 
-The lab uses [X-ray radiography](/analytical-services/x-ray-radiography/) to look inside solder joints and vias. We use cross-sectioning with [optical microscopy](/analytical-services/optical-microscopy/) to check plating and layers. [FTIR](/analytical-services/fourier-transform-infra-red-spectroscopy/) and [scanning electron microscopy](/analytical-services/scanning-electron-microscopy/) help to identify contamination.
+The lab uses [X-ray radiography](/analytical-services/x-ray-radiography/) to look inside solder joints and vias. We use cross-sectioning with optical microscopy to check plating and layers. [FTIR](/analytical-services/fourier-transform-infra-red-spectroscopy/) and [scanning electron microscopy](/analytical-services/scanning-electron-microscopy/) help to identify contamination.
 
 To discuss a failed board, [request a quote](/contact/).

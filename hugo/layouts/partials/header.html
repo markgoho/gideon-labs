@@ -1,12 +1,24 @@
-<header class="header">
-	<div class="container">
-    <div class="top-container">
-      <a href="/" class="logo">
-        <div class="gideon">Gideon</div>
-        <div class="labs">Analytical Labs</div>
-      </a>
-      <a href="/contact/" class="call-to-action">Start solving</a>
-    </div>
-		{{ partial "menu.html" . }}
-	</div>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="site-logo" aria-label="Gideon Analytical Labs home">
+      <img src="/img/logo.svg" alt="Gideon Analytical Labs" width="290" height="78">
+    </a>
+    <a href="/contact/" class="btn btn--small site-header__cta">Request a failure analysis</a>
+    <button class="menu__btn" aria-haspopup="true" aria-expanded="false" aria-controls="site-menu">Menu</button>
+    <nav class="menu" aria-label="Main">
+      <ul class="menu__list" id="site-menu">
+        {{- $currentNode := . }}
+        {{- range sort .Site.Menus.main }}
+        {{- if .Name }}
+        {{- /* Category pages belong to Success Stories but are not children of /posts/. */}}
+        {{- $isStories := and (eq .URL "/posts/") (in (slice "taxonomy" "term") $currentNode.Kind) }}
+        {{- $active := or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) $isStories }}
+        <li class="menu__item{{ if $active }} menu__item--active{{ end }}">
+          <a class="menu__link" href="{{ .URL }}"{{ if $currentNode.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        </li>
+        {{- end }}
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
 </header>

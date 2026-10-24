@@ -17,6 +17,15 @@
       ],
       "headers": [
         {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        },
+        {
           "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font|css)",
           "headers": [
             {
@@ -119,6 +128,15 @@
         "**/node_modules/**"
       ],
       "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        },
         {
           "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font)",
           "headers": [
@@ -747,7 +765,7 @@
         },
         {
           "source": "/inductive-coupled-plasma-and-atomic-absorption-icp-and-aa/",
-          "destination": "/analytical-services/inductive-coupled-plasma-and-atomic-absorption-icp-and-aa/",
+          "destination": "/analytical-services/",
           "type": 301
         },
         {
@@ -758,6 +776,56 @@
         {
           "source": "/thermal.htm",
           "destination": "/analytical-services/thermal-analysis/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/optical-microscopy/",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/optical-microscopy",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/gcms/",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/gcms",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/inductive-coupled-plasma-and-atomic-absorption-icp-and-aa/",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/inductive-coupled-plasma-and-atomic-absorption-icp-and-aa",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/c-scanning-acoustic-microscopy/",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/analytical-services/c-scanning-acoustic-microscopy",
+          "destination": "/analytical-services/",
+          "type": 301
+        },
+        {
+          "source": "/page/:n/",
+          "destination": "/posts/page/:n/",
+          "type": 301
+        },
+        {
+          "source": "/page/:n",
+          "destination": "/posts/page/:n/",
           "type": 301
         }
       ]

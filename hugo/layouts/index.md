@@ -10,7 +10,7 @@
 {{ end }}
 ## {{ hugo.Data.home.stepsTitle }}
 
-{{ range $i, $s := hugo.Data.home.steps }}{{ add $i 1 }}. {{ $s }}
+{{ range $i, $s := hugo.Data.home.steps }}{{ add $i 1 }}. {{ $s.title }}. {{ $s.body }}
 {{ end }}
 ## Recent Success Stories
 

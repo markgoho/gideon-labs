@@ -13,30 +13,18 @@
   </head>
 
 
-  <body class="body">
+  <body class="site">
+    <a class="skip-link" href="#main">Skip to content</a>
     {{ with partial "md-twin-url.html" . }}
     <p class="sr-clip" aria-hidden="true">A Markdown version of this page is available at {{ . }}</p>
     {{ end }}
-    <div class="container container--outer">
-      {{ partial "header" . }}
-      {{ block "above-content" .}}
-      {{ end }}
-      <div class="wrapper flex">
-        <div class="primary">
-        {{ block "main" . }}
-          {{ with .Content }}
-          <div class="content main__content clearfix">
-            {{ . }}
-          </div>
-          {{ end }}
-        {{ end }}
-        </div>
-        {{ partial "sidebar.html" . }}
-      </div>
-      {{ block "below-content" .}}
-      {{ end }}
-      {{ partial "footer" . }}
-    </div>
+    {{ partial "header" . }}
+    <main id="main" class="site-main">
+    {{ block "main" . }}
+      {{ partial "page.html" . }}
+    {{ end }}
+    </main>
+    {{ partial "footer" . }}
     {{ $opts := dict "targetPath" "main.js"  }}
     {{ $built := resources.Get "ts/main.ts" | js.Build $opts | resources.Minify | resources.Fingerprint }}
     <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>

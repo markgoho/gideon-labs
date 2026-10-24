@@ -1,4 +1,7 @@
 ---
+image: "https://res.cloudinary.com/dy3wlzuye/image/upload/f_auto,c_scale,w_300/GideonLabs/IMG_5279.jpg"
+description: "Nondestructive inspection of solder joints, voids, cracks, delamination and sealed packages."
+weight: 3
 title: X-Ray Radiography
 ---
 

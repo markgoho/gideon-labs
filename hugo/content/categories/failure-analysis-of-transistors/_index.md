@@ -10,6 +10,6 @@ Transistors usually fail by electrical overstress (EOS), which can leave the ter
 
 The case studies in this category include power MOSFETs with all terminals shorted and an IGBT that could not hold its rated voltage because of a passivation defect. Others cover a JFET and optocouplers.
 
-The lab starts with electrical tests and curve tracing to find the failure mode. We then decapsulate the part and inspect the die with [optical microscopy](/analytical-services/optical-microscopy/). [Scanning electron microscopy](/analytical-services/scanning-electron-microscopy/) and [X-ray radiography](/analytical-services/x-ray-radiography/) give more detail when needed.
+The lab starts with electrical tests and curve tracing to find the failure mode. We then decapsulate the part and inspect the die with optical microscopy. [Scanning electron microscopy](/analytical-services/scanning-electron-microscopy/) and [X-ray radiography](/analytical-services/x-ray-radiography/) give more detail when needed.
 
 If you have failed transistors, [request a quote](/contact/).
